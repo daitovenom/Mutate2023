@@ -74,5 +74,8 @@
     <ClInclude Include="source\enemydamegegazou.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="x64\Release\syuzinnkouKENJYUU.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
