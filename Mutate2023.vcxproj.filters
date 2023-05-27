@@ -15,63 +15,63 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="x64\Release\testgame2023+.cpp">
+    <ClCompile Include="source\testgame2023+.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="x64\Release\continue.h">
+    <ClInclude Include="source\continue.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="x64\Release\kasurikougeki.h">
+    <ClInclude Include="source\kasurikougeki.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="x64\Release\key.h">
+    <ClInclude Include="source\key.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="x64\Release\playerhensuuVr2.h">
+    <ClInclude Include="source\playerhensuuVr2.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="x64\Release\sennkounyuuryokujyuujiki.h">
+    <ClInclude Include="source\sennkounyuuryokujyuujiki.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="x64\Release\settoku.h">
+    <ClInclude Include="source\settoku.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="x64\Release\settoku2.h">
+    <ClInclude Include="source\settoku2.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="x64\Release\stage1Player_Draw.h">
+    <ClInclude Include="source\stage1Player_Draw.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="x64\Release\stage2Player_Draw.h">
+    <ClInclude Include="source\stage2Player_Draw.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="x64\Release\stgae1Player_Update.h">
+    <ClInclude Include="source\stgae1Player_Update.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="x64\Release\stgae2Player_Update.h">
+    <ClInclude Include="source\stgae2Player_Update.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="x64\Release\suraidoidoubyouga.h">
+    <ClInclude Include="source\suraidoidoubyouga.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="x64\Release\syuzinkoukougekigazou.h">
+    <ClInclude Include="source\syuzinkoukougekigazou.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="x64\Release\taitol.h">
+    <ClInclude Include="source\taitol.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="x64\Release\talk.h">
+    <ClInclude Include="source\talk.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="x64\Release\UEsuraido.h">
+    <ClInclude Include="source\UEsuraido.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="x64\Release\orderofcharacters.h">
+    <ClInclude Include="source\orderofcharacters.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="x64\Release\enemydamegegazou.h">
+    <ClInclude Include="source\enemydamegegazou.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
   </ItemGroup>
