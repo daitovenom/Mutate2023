@@ -154,7 +154,7 @@
     <ClCompile Include="x64\Release\testgame2023+.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="x64\Release\countine.h" />
+    <ClInclude Include="x64\Release\continue.h" />
     <ClInclude Include="x64\Release\enemydamegegazou.h" />
     <ClInclude Include="x64\Release\kasurikougeki.h" />
     <ClInclude Include="x64\Release\key.h" />

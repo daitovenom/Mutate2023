@@ -4,7 +4,7 @@
 #include "talk.h"
 #include "playerhensuuVr2.h"
 #include "taitol.h"
-#include "countine.h"
+#include "continue.h"
 #include "stage1Player_Draw.h"
 #include "stgae2Player_Update.h"
 #include "stage2Player_Draw.h"

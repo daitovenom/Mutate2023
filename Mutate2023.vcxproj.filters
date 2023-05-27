@@ -20,7 +20,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="x64\Release\countine.h">
+    <ClInclude Include="x64\Release\continue.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="x64\Release\kasurikougeki.h">
