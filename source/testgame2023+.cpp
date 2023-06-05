@@ -37,7 +37,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int nCmdShow)
 	SetTransColor(255, 255, 255); // 読み込む画像の前にこいつを置くことで透明化できる。ループ内にも書いて正しく動くが毎回読み込むようになってしまうため処理が遅くなる。
 
 	// ムービーファイルをロードします。
-	MovieGraphHandle = LoadGraph("180half_f.gif");
+	MovieGraphHandle = LoadGraph(".\\resource\\movies\\180half_f.mp4");
 	// ムービーを再生状態にします
 	PlayMovieToGraph(MovieGraphHandle);
 	// タイトルで出てくるムービーファイルをロードします。
@@ -45,26 +45,26 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int nCmdShow)
 	// タイトルで出てくるムービーを再生状態にします
 	PlayMovieToGraph(taitolGraphHandle);
 	//敵がダメージを受けた時の心臓のムービーファイルをロードします。
-	sinnzouGraphHandle = LoadGraph("original.gif");
+	sinnzouGraphHandle = LoadGraph(".\\resource\\movies\\original.mp4");
 	// 敵がダメージを受けた時の心臓のムービーを再生状態にします
 	PlayMovieToGraph(sinnzouGraphHandle);
 
 	// 雪ムービーファイルをロードします。
-	snowGraphHandle = LoadGraph("20160103081928.gif");
+	snowGraphHandle = LoadGraph(".\\resource\\movies\\20160103081928.mp4");
 	// 雪ムービーを再生状態にします
 	PlayMovieToGraph(snowGraphHandle);
 
 	// アナログノイズムービーファイルをロードします。
-	anarogunoizuGraphHandle = LoadGraph("MOSHED-2020-6-1-23-33-37.gif");
+	anarogunoizuGraphHandle = LoadGraph(".\\resource\\movies\\MOSHED-2020-6-1-23-33-37.mp4");
 	// アナログノイズムービーを再生状態にします
 	PlayMovieToGraph(anarogunoizuGraphHandle);
 
 	// ファイルをロードします。
-	gimenHandle = LoadGraph("photo0000-3903.bmp");
+	gimenHandle = LoadGraph(".\\resource\\images\\photo0000-3903.bmp");
 	PlayMovieToGraph(gimenHandle);
 
 	// ファイルをロードします。
-	kodomogif = LoadGraph("kodomo.gif");
+	kodomogif = LoadGraph(".\\resource\\movies\\kodomo.mp4");
 	PlayMovieToGraph(kodomogif);
 	// ファイルをロードします。
 	 //kaiwaHandle = OpenMovieToGraph("MOSHED-2020-6-2-19-11-5.gif");
@@ -73,241 +73,241 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int nCmdShow)
 	//PlayMovieToGraph(kaiwaHandle);
 
 	// 電話にでるかどうかのファイルをロードします。
-	dennwaHandle = LoadGraph("dennwasenntaku.gif");
+	dennwaHandle = LoadGraph(".\\resource\\movies\\dennwasenntaku.mp4");
 
 	//会話のファイルをロードします。
-	enemytalk1Handle = LoadGraph("私のビデオ1.gif");
+	enemytalk1Handle = LoadGraph(".\\resource\\movies\\私のビデオ1.mp4");
 	//会話のファイルをロードします。
-	enemytalk2Handle = LoadGraph("enemytalk2.gif");
+	enemytalk2Handle = LoadGraph(".\\resource\\movies\\enemytalk2.mp4");
 
-	dennwa = LoadGraph("21b667f1-88cb-4e41-9bdc-41351a55655b.gif");
+	dennwa = LoadGraph(".\\resource\\movies\\21b667f1-88cb-4e41-9bdc-41351a55655b.mp4");
 
 	// ファイルをロードします。
-	SHOTHandle = LoadGraph("ENEMYGIF1.gif");
+	SHOTHandle = LoadGraph(".\\resource\\movies\\ENEMYGIF1.mp4");
 	PlayMovieToGraph(SHOTHandle);
 
 
 	// ヴィオラをロードします。
-	vioraHandle = LoadGraph("MOSHED-2020-6-2-19-37-21.gif");
+	vioraHandle = LoadGraph(".\\resource\\movies\\MOSHED-2020-6-2-19-37-21.mp4");
 	PlayMovieToGraph(vioraHandle);
 
 	// 説得中の背景をロードします。
-	settokugamenntyuunohaikeiHandle = LoadGraph("settokugamenntyuunohaikei.gif");
+	settokugamenntyuunohaikeiHandle = LoadGraph(".\\resource\\movies\\settokugamenntyuunohaikei.mp4");
 	PlayMovieToGraph(settokugamenntyuunohaikeiHandle);
 
 	// 選択し1をロードします。
-	settoku1Handle = LoadGraph("settoku1.gif");
+	settoku1Handle = LoadGraph(".\\resource\\movies\\settoku1.mp4");
 
 	// 戦闘後をロードします。
-	sentougoHandle = LoadGraph("senntougonoOUT.gif");
+	sentougoHandle = LoadGraph(".\\resource\\movies\\senntougonoOUT.mp4");
 
 	// コンティニュー画面の背景をロードします。
-	countimuHandle = LoadGraph("MOSHED-2020-6-1-23-49-29.gif");
+	countimuHandle = LoadGraph(".\\resource\\movies\\MOSHED-2020-6-1-23-49-29.mp4");
 	PlayMovieToGraph(countimuHandle);
 
 	//戦闘中の背景
-	stage1haikeiHandle = LoadGraph("stage1.gif");
+	stage1haikeiHandle = LoadGraph(".\\resource\\movies\\stage1.mp4");
 	PlayMovieToGraph(stage1haikeiHandle);
 
 	//戦闘中の背景
-	stage2haikeiHandle = LoadGraph("stage2haikei.gif");
+	stage2haikeiHandle = LoadGraph(".\\resource\\movies\\stage2haikei.mp4");
 	PlayMovieToGraph(stage2haikeiHandle);
 
 	//女教師の電話映像
-	dennwa = LoadGraph("dennwa2.gif");
+	dennwa = LoadGraph(".\\resource\\movies\\dennwa2.mp4");
 	PlayMovieToGraph(dennwa);
 
 	//タイトルの背景。
-	taitolhaikeiHandle = LoadGraph("taitoruhaikei.gif");
+	taitolhaikeiHandle = LoadGraph(".\\resource\\movies\\taitoruhaikei.mp4");
 	PlayMovieToGraph(taitolhaikeiHandle);
 
-	LoadDivGraph("lockon.bmp", 3, 3, 1, 23, 23, lockonHandle);//なので、一度読み込むだけ画像は使えるし、処理を遅くしないためにループに入る前かつWinMainの中に書いた。
-	LoadDivGraph("ENEMYVR1.bmp", 3, 3, 1, 18, 33, enemyGHandle);
-	LoadDivGraph("ENEMY1.bmp", 1, 1, 1, 18, 33, enemygameGHandle);//怯んだ敵の画像
+	LoadDivGraph(".\\resource\\images\\lockon.bmp", 3, 3, 1, 23, 23, lockonHandle);//なので、一度読み込むだけ画像は使えるし、処理を遅くしないためにループに入る前かつWinMainの中に書いた。
+	LoadDivGraph(".\\resource\\images\\ENEMYVR1.bmp", 3, 3, 1, 18, 33, enemyGHandle);
+	LoadDivGraph(".\\resource\\images\\ENEMY1.bmp", 1, 1, 1, 18, 33, enemygameGHandle);//怯んだ敵の画像
 
 
 	//右向き
-	LoadDivGraph("playersyuzinnkoukuronuriKAIZOU6.bmp", 3, 3, 1, 20, 33, playerGHandle);
+	LoadDivGraph(".\\resource\\images\\playersyuzinnkoukuronuriKAIZOU6.bmp", 3, 3, 1, 20, 33, playerGHandle);
 
 	//左向き
-	LoadDivGraph("playersyuzinnkoukuronuriKAIZOU6a.bmp", 3, 3, 1, 20, 33, playerHandle2);
+	LoadDivGraph(".\\resource\\images\\playersyuzinnkoukuronuriKAIZOU6a.bmp", 3, 3, 1, 20, 33, playerHandle2);
 
 
-	LoadDivGraph("tuubyousyuzinnkou1bmp.bmp", 1, 1, 1, 35, 33, player1GHandle);
-	LoadDivGraph("tuubyousyuzinnkou2bmp.bmp", 1, 1, 1, 35, 33, player2GHandle);
-	LoadDivGraph("tuubyousyuzinnkou3bmp.bmp", 1, 1, 1, 35, 33, player3GHandle);
-	LoadDivGraph("tuubyousyuzinnkou4bmp.bmp", 1, 1, 1, 35, 33, player4GHandle);
-	LoadDivGraph("tuubyousyuzinnkou5bmp.bmp", 1, 1, 1, 35, 33, player5GHandle);
+	LoadDivGraph(".\\resource\\images\\tuubyousyuzinnkou1bmp.bmp", 1, 1, 1, 35, 33, player1GHandle);
+	LoadDivGraph(".\\resource\\images\\tuubyousyuzinnkou2bmp.bmp", 1, 1, 1, 35, 33, player2GHandle);
+	LoadDivGraph(".\\resource\\images\\tuubyousyuzinnkou3bmp.bmp", 1, 1, 1, 35, 33, player3GHandle);
+	LoadDivGraph(".\\resource\\images\\tuubyousyuzinnkou4bmp.bmp", 1, 1, 1, 35, 33, player4GHandle);
+	LoadDivGraph(".\\resource\\images\\tuubyousyuzinnkou5bmp.bmp", 1, 1, 1, 35, 33, player5GHandle);
 
 	//攻撃を食らったときの画像。
-	LoadDivGraph("syuzinnkoukurau1KAI2.bmp", 1, 1, 1, 35, 33, playerdamegeGHandle);
+	LoadDivGraph(".\\resource\\images\\syuzinnkoukurau1KAI2.bmp", 1, 1, 1, 35, 33, playerdamegeGHandle);
 
 	//主人公のガードモーション
-	LoadDivGraph("syuzinnkougard.bmp", 1, 1, 1, 44, 33, playergardGHandle);
+	LoadDivGraph(".\\resource\\images\\syuzinnkougard.bmp", 1, 1, 1, 44, 33, playergardGHandle);
 
 	//タイトル
-	LoadDivGraph("mmm2.bmp", 1, 1, 1, 92, 7, taitolHandle);
-	LoadDivGraph("HANDOFDEATH2.bmp", 1, 1, 1, 90, 9, taitol2Handle);
+	LoadDivGraph(".\\resource\\images\\mmm2.bmp", 1, 1, 1, 92, 7, taitolHandle);
+	LoadDivGraph(".\\resource\\images\\HANDOFDEATH2.bmp", 1, 1, 1, 90, 9, taitol2Handle);
 
-	LoadDivGraph("syuzinnkoukuronuriA.bmp", 1, 1, 1, 44, 33, testplayerGHandle);
-	LoadDivGraph("kikenn.png", 12, 4, 3, 62, 66, kikennhanndle);
-	LoadDivGraph("hartmark.bmp", 3, 3, 1, 13, 10, hartmarkhanndle);
-	LoadDivGraph("blood.bmp", 3, 3, 1, 13, 10, bloodGHandle);
+	LoadDivGraph(".\\resource\\images\\syuzinnkoukuronuriA.bmp", 1, 1, 1, 44, 33, testplayerGHandle);
+	LoadDivGraph(".\\resource\\images\\kikenn.png", 12, 4, 3, 62, 66, kikennhanndle);
+	LoadDivGraph(".\\resource\\images\\hartmark.bmp", 3, 3, 1, 13, 10, hartmarkhanndle);
+	LoadDivGraph(".\\resource\\images\\blood.bmp", 3, 3, 1, 13, 10, bloodGHandle);
 
 	//右向き殴る
-	LoadDivGraph("naguruAkuronuri.bmp", 1, 1, 1, 44, 33, playernaguruAGHandle);
-	LoadDivGraph("naguruBkuronuri.bmp", 1, 1, 1, 44, 33, playernaguruBGHandle);
-	LoadDivGraph("naguruBkuronuri2.bmp", 1, 1, 1, 44, 33, playernaguruBGHandle2);
-	LoadDivGraph("naguruBkuronuri3.bmp", 1, 1, 1, 44, 33, playernaguruBGHandle3);
+	LoadDivGraph(".\\resource\\images\\naguruAkuronuri.bmp", 1, 1, 1, 44, 33, playernaguruAGHandle);
+	LoadDivGraph(".\\resource\\images\\naguruBkuronuri.bmp", 1, 1, 1, 44, 33, playernaguruBGHandle);
+	LoadDivGraph(".\\resource\\images\\naguruBkuronuri2.bmp", 1, 1, 1, 44, 33, playernaguruBGHandle2);
+	LoadDivGraph(".\\resource\\images\\naguruBkuronuri3.bmp", 1, 1, 1, 44, 33, playernaguruBGHandle3);
 
 	//左向き殴る
-	LoadDivGraph("naguruAkuronuriB.bmp", 1, 1, 1, 44, 33, playernaguruAGHandleB);
-	LoadDivGraph("naguruBkuronuriB.bmp", 1, 1, 1, 44, 33, playernaguruBGHandleB);
-	LoadDivGraph("naguruBkuronuri2B.bmp", 1, 1, 1, 44, 33, playernaguruBGHandle2B);
-	LoadDivGraph("naguruBkuronuri3B.bmp", 1, 1, 1, 44, 33, playernaguruBGHandle3B);
+	LoadDivGraph(".\\resource\\images\\naguruAkuronuriB.bmp", 1, 1, 1, 44, 33, playernaguruAGHandleB);
+	LoadDivGraph(".\\resource\\images\\naguruBkuronuriB.bmp", 1, 1, 1, 44, 33, playernaguruBGHandleB);
+	LoadDivGraph(".\\resource\\images\\naguruBkuronuri2B.bmp", 1, 1, 1, 44, 33, playernaguruBGHandle2B);
+	LoadDivGraph(".\\resource\\images\\naguruBkuronuri3B.bmp", 1, 1, 1, 44, 33, playernaguruBGHandle3B);
 
 	//主人公タバコ
-	LoadDivGraph("syuzinnkoutabakoA.bmp", 1, 1, 1, 22, 33, playertabakoAHandle);
-	LoadDivGraph("syuzinnkoutabakoB.bmp", 1, 1, 1, 22, 33, playertabakoBHandle);
-	LoadDivGraph("syuzinnkoutabakoC.bmp", 1, 1, 1, 22, 33, playertabakoCHandle);
-	LoadDivGraph("syuzinnkoutabakoD.bmp", 1, 1, 1, 22, 33, playertabakoDHandle);//こいつだけ画像の横の大きさは26だが、syuzinnkoutabakoA～Cに合わせて22とした。22としても切り取られることはない。
+	LoadDivGraph(".\\resource\\images\\syuzinnkoutabakoA.bmp", 1, 1, 1, 22, 33, playertabakoAHandle);
+	LoadDivGraph(".\\resource\\images\\syuzinnkoutabakoB.bmp", 1, 1, 1, 22, 33, playertabakoBHandle);
+	LoadDivGraph(".\\resource\\images\\syuzinnkoutabakoC.bmp", 1, 1, 1, 22, 33, playertabakoCHandle);
+	LoadDivGraph(".\\resource\\images\\syuzinnkoutabakoD.bmp", 1, 1, 1, 22, 33, playertabakoDHandle);//こいつだけ画像の横の大きさは26だが、syuzinnkoutabakoA～Cに合わせて22とした。22としても切り取られることはない。
 
 
 	//右向きの蹴る
-	LoadDivGraph("syuzinnkouKONNBO1ANOIZU1.bmp", 1, 1, 1, 35, 33, playerKONNBO1AHandle);
-	LoadDivGraph("syuzinnkouKONNBO1ANOIZU1.bmp", 1, 1, 1, 35, 33, playerKONNBO1ANOIZU1Handle);
-	LoadDivGraph("syuzinnkouKONNBO1ANOIZU2.bmp", 1, 1, 1, 35, 33, playerKONNBO1ANOIZU2Handle);
-	LoadDivGraph("syuzinnkouKONNBO1ANOIZU3.bmp", 1, 1, 1, 35, 33, playerKONNBO1ANOIZU3Handle);
-	LoadDivGraph("syuzinnkouKONNBO1ANOIZU4.bmp", 1, 1, 1, 35, 33, playerKONNBO1ANOIZU4Handle);
+	LoadDivGraph(".\\resource\\images\\syuzinnkouKONNBO1ANOIZU1.bmp", 1, 1, 1, 35, 33, playerKONNBO1AHandle);
+	LoadDivGraph(".\\resource\\images\\syuzinnkouKONNBO1ANOIZU1.bmp", 1, 1, 1, 35, 33, playerKONNBO1ANOIZU1Handle);
+	LoadDivGraph(".\\resource\\images\\syuzinnkouKONNBO1ANOIZU2.bmp", 1, 1, 1, 35, 33, playerKONNBO1ANOIZU2Handle);
+	LoadDivGraph(".\\resource\\images\\syuzinnkouKONNBO1ANOIZU3.bmp", 1, 1, 1, 35, 33, playerKONNBO1ANOIZU3Handle);
+	LoadDivGraph(".\\resource\\images\\syuzinnkouKONNBO1ANOIZU4.bmp", 1, 1, 1, 35, 33, playerKONNBO1ANOIZU4Handle);
 
-	LoadDivGraph("syuzinnkouKONNBO1B.bmp", 1, 1, 1, 35, 33, playerKONNBO1BHandle);
+	LoadDivGraph(".\\resource\\images\\syuzinnkouKONNBO1B.bmp", 1, 1, 1, 35, 33, playerKONNBO1BHandle);
 
 	//左向きの蹴る
-	LoadDivGraph("syuzinnkouKONNBO1ANOIZU1B.bmp", 1, 1, 1, 35, 33, playerKONNBO1AHandleB);
-	LoadDivGraph("syuzinnkouKONNBO1ANOIZU1B.bmp", 1, 1, 1, 35, 33, playerKONNBO1ANOIZU1HandleB);
-	LoadDivGraph("syuzinnkouKONNBO1ANOIZU2B.bmp", 1, 1, 1, 35, 33, playerKONNBO1ANOIZU2HandleB);
-	LoadDivGraph("syuzinnkouKONNBO1ANOIZU3B.bmp", 1, 1, 1, 35, 33, playerKONNBO1ANOIZU3HandleB);
-	LoadDivGraph("syuzinnkouKONNBO1ANOIZU4B.bmp", 1, 1, 1, 35, 33, playerKONNBO1ANOIZU4HandleB);
+	LoadDivGraph(".\\resource\\images\\syuzinnkouKONNBO1ANOIZU1B.bmp", 1, 1, 1, 35, 33, playerKONNBO1AHandleB);
+	LoadDivGraph(".\\resource\\images\\syuzinnkouKONNBO1ANOIZU1B.bmp", 1, 1, 1, 35, 33, playerKONNBO1ANOIZU1HandleB);
+	LoadDivGraph(".\\resource\\images\\syuzinnkouKONNBO1ANOIZU2B.bmp", 1, 1, 1, 35, 33, playerKONNBO1ANOIZU2HandleB);
+	LoadDivGraph(".\\resource\\images\\syuzinnkouKONNBO1ANOIZU3B.bmp", 1, 1, 1, 35, 33, playerKONNBO1ANOIZU3HandleB);
+	LoadDivGraph(".\\resource\\images\\syuzinnkouKONNBO1ANOIZU4B.bmp", 1, 1, 1, 35, 33, playerKONNBO1ANOIZU4HandleB);
 
-	LoadDivGraph("syuzinnkouKONNBO1BHANTEN.bmp", 1, 1, 1, 35, 33, playerKONNBO1BHandleB);
+	LoadDivGraph(".\\resource\\images\\syuzinnkouKONNBO1BHANTEN.bmp", 1, 1, 1, 35, 33, playerKONNBO1BHandleB);
 
 	//スライド移動の画像。
-	LoadDivGraph("playersyuzinnkouidouA.bmp", 1, 1, 1, 22, 33, playeridouAHandle);
-	LoadDivGraph("playersyuzinnkouidouA4.bmp", 1, 1, 1, 22, 33, playeridouA4Handle);
-	LoadDivGraph("playersyuzinnkouidouA2.bmp", 1, 1, 1, 22, 33, playeridouA2Handle);
-	LoadDivGraph("playersyuzinnkouidouA3.bmp", 1, 1, 1, 22, 33, playeridouA3Handle);
-	LoadDivGraph("playersuraido5.bmp", 1, 1, 1, 22, 33, playeridouA5Handle);
+	LoadDivGraph(".\\resource\\images\\playersyuzinnkouidouA.bmp", 1, 1, 1, 22, 33, playeridouAHandle);
+	LoadDivGraph(".\\resource\\images\\playersyuzinnkouidouA4.bmp", 1, 1, 1, 22, 33, playeridouA4Handle);
+	LoadDivGraph(".\\resource\\images\\playersyuzinnkouidouA2.bmp", 1, 1, 1, 22, 33, playeridouA2Handle);
+	LoadDivGraph(".\\resource\\images\\playersyuzinnkouidouA3.bmp", 1, 1, 1, 22, 33, playeridouA3Handle);
+	LoadDivGraph(".\\resource\\images\\playersuraido5.bmp", 1, 1, 1, 22, 33, playeridouA5Handle);
 	//左向きのスライド移動の画像。
-	LoadDivGraph("playersyuzinnkouidouAhidari.bmp", 1, 1, 1, 22, 33, playeridouAhidariHandle);
-	LoadDivGraph("playersyuzinnkouidouA4hidari.bmp", 1, 1, 1, 22, 33, playeridouA4hidariHandle);
-	LoadDivGraph("playersyuzinnkouidouA2hidari.bmp", 1, 1, 1, 22, 33, playeridouA2hidariHandle);
-	LoadDivGraph("playersyuzinnkouidouA3hidari.bmp", 1, 1, 1, 22, 33, playeridouA3hidariHandle);
-	LoadDivGraph("playersuraidohidari5.bmp", 1, 1, 1, 22, 33, playeridouA5hidariHandle);
+	LoadDivGraph(".\\resource\\images\\playersyuzinnkouidouAhidari.bmp", 1, 1, 1, 22, 33, playeridouAhidariHandle);
+	LoadDivGraph(".\\resource\\images\\playersyuzinnkouidouA4hidari.bmp", 1, 1, 1, 22, 33, playeridouA4hidariHandle);
+	LoadDivGraph(".\\resource\\images\\playersyuzinnkouidouA2hidari.bmp", 1, 1, 1, 22, 33, playeridouA2hidariHandle);
+	LoadDivGraph(".\\resource\\images\\playersyuzinnkouidouA3hidari.bmp", 1, 1, 1, 22, 33, playeridouA3hidariHandle);
+	LoadDivGraph(".\\resource\\images\\playersuraidohidari5.bmp", 1, 1, 1, 22, 33, playeridouA5hidariHandle);
 	//LoadDivGraph("playersuraido4.bmp", 1, 1, 1, 22, 33, playeridouA4Handle);
 
 
 
-	LoadDivGraph("enemystage2attack2anemy1KENJYUU.bmp", 2, 2, 1, 30, 45, enemy1KENJYUUHandle);
+	LoadDivGraph(".\\resource\\images\\enemystage2attack2anemy1KENJYUU.bmp", 2, 2, 1, 30, 45, enemy1KENJYUUHandle);
 
 	//LoadDivGraph("enemystage2attack2anemy1KENJYUU.bmp", 2, 2, 1, 30, 45, enemy1KENJYUUhidariHandle);
-	LoadDivGraph("naihuGAZOU1.bmp", 1, 1, 1, 30, 70, naihuHandle);
+	LoadDivGraph(".\\resource\\images\\naihuGAZOU1.bmp", 1, 1, 1, 30, 70, naihuHandle);
 
-	LoadDivGraph("naihu2.bmp", 1, 1, 1, 30, 30, naihu2Handle);
+	LoadDivGraph(".\\resource\\images\\naihu2.bmp", 1, 1, 1, 30, 30, naihu2Handle);
 
 
 
 
 	//主人公の拳銃攻撃の画像
-	LoadDivGraph("syuzinnkouJYUU.bmp", 5, 5, 1, 31, 35, playerKENJYUU);
+	LoadDivGraph(".\\resource\\images\\syuzinnkouJYUU.bmp", 5, 5, 1, 31, 35, playerKENJYUU);
 	//主人公の拳銃攻撃の画像
-	LoadDivGraph("syuzinnkouJYUUhidarimuki.bmp", 5, 5, 1, 31, 35, playerKENJYUUhidari);
+	LoadDivGraph(".\\resource\\images\\syuzinnkouJYUUhidarimuki.bmp", 5, 5, 1, 31, 35, playerKENJYUUhidari);
 
 	//攻撃中の文字を描画するための読み込み。
-	LoadDivGraph("Great!!.bmp", 1, 1, 1, 70, 30, mozigrateHandle);
+	LoadDivGraph(".\\resource\\images\\Great!!.bmp", 1, 1, 1, 70, 30, mozigrateHandle);
 
 
 	//敵の攻撃の画像の読みこみ。
 
-	LoadDivGraph("ENEMYkougekiA1.bmp", 1, 1, 1, 22, 33, ENEMYkougekiA1Handle);
-	LoadDivGraph("ENEMYkougekiA2.bmp", 1, 1, 1, 36, 33, ENEMYkougekiA2Handle);
+	LoadDivGraph(".\\resource\\images\\ENEMYkougekiA1.bmp", 1, 1, 1, 22, 33, ENEMYkougekiA1Handle);
+	LoadDivGraph(".\\resource\\images\\ENEMYkougekiA2.bmp", 1, 1, 1, 36, 33, ENEMYkougekiA2Handle);
 
-	LoadDivGraph("stage2enemy2attackA.bmp", 1, 1, 1, 30, 45, STAGE2ENEMY2kougekiA1Handle);
-	LoadDivGraph("stage2ememy2B.bmp", 1, 1, 1, 45, 45, STAGE2ENEMY2kougekiB1Handle);
+	LoadDivGraph(".\\resource\\images\\stage2enemy2attackA.bmp", 1, 1, 1, 30, 45, STAGE2ENEMY2kougekiA1Handle);
+	LoadDivGraph(".\\resource\\images\\stage2ememy2B.bmp", 1, 1, 1, 45, 45, STAGE2ENEMY2kougekiB1Handle);
 
-	LoadDivGraph("enemystage2attackanemy1.bmp", 1, 1, 1, 66, 45, STAGE2ENEMY1kougekiA1Handle);
-	LoadDivGraph("enemystage2attack2anemy1.bmp", 1, 1, 1, 66, 45, STAGE2ENEMY1kougekiB1Handle);
+	LoadDivGraph(".\\resource\\images\\enemystage2attackanemy1.bmp", 1, 1, 1, 66, 45, STAGE2ENEMY1kougekiA1Handle);
+	LoadDivGraph(".\\resource\\images\\enemystage2attack2anemy1.bmp", 1, 1, 1, 66, 45, STAGE2ENEMY1kougekiB1Handle);
 
 	//敵1がダメージを負った際の画像。
-	LoadDivGraph("enemydamegi.bmp", 1, 1, 1, 80, 33, enemydamegeHandle);
+	LoadDivGraph(".\\resource\\images\\enemydamegi.bmp", 1, 1, 1, 80, 33, enemydamegeHandle);
 
 	//敵2がダメージを負った際の画像。
-	LoadDivGraph("enemystage2damegi.bmp", 1, 1, 1, 66, 45, enemy2damegeHandle);
+	LoadDivGraph(".\\resource\\images\\enemystage2damegi.bmp", 1, 1, 1, 66, 45, enemy2damegeHandle);
 
 	//敵3がダメージを負った際の画像。
-	LoadDivGraph("stage2ememy3damegi.bmp", 1, 1, 1, 45, 45, enemy3damegeHandle);
+	LoadDivGraph(".\\resource\\images\\stage2ememy3damegi.bmp", 1, 1, 1, 45, 45, enemy3damegeHandle);
 
 
-	LoadDivGraph("enemy2hirumi.bmp", 1, 1, 1, 30, 45, STAGE2ENEMY1hirumiHandle);
+	LoadDivGraph(".\\resource\\images\\enemy2hirumi.bmp", 1, 1, 1, 30, 45, STAGE2ENEMY1hirumiHandle);
 
-	LoadDivGraph("enemy3hirumi.bmp", 1, 1, 1, 30, 45, STAGE2ENEMY2hirumiHandle);
+	LoadDivGraph(".\\resource\\images\\enemy3hirumi.bmp", 1, 1, 1, 30, 45, STAGE2ENEMY2hirumiHandle);
 
-	LoadDivGraph("enemy2.bmp", 1, 1, 1, 35, 33, enemy2Handle);
-	LoadDivGraph("enemy2A.bmp", 1, 1, 1, 35, 33, enemy2AHandle);
+	LoadDivGraph(".\\resource\\images\\enemy2.bmp", 1, 1, 1, 35, 33, enemy2Handle);
+	LoadDivGraph(".\\resource\\images\\enemy2A.bmp", 1, 1, 1, 35, 33, enemy2AHandle);
 
-	LoadDivGraph("enemystage2KAI.bmp", 3, 3, 1, 22, 45, enemy2);
-	LoadDivGraph("enemy2stage2KAI.bmp", 3, 3, 1, 22, 45, enemy3);
+	LoadDivGraph(".\\resource\\images\\enemystage2KAI.bmp", 3, 3, 1, 22, 45, enemy2);
+	LoadDivGraph(".\\resource\\images\\enemy2stage2KAI.bmp", 3, 3, 1, 22, 45, enemy3);
 
 
 	//右向き刀攻撃
-	LoadDivGraph("syuzinnkouKATANA.bmp", 1, 1, 1, 30, 50, KATANA);
-	LoadDivGraph("syuzinnkouKATANA2.bmp", 1, 1, 1, 40, 40, KATANA2);
-	LoadDivGraph("syuzinnkouKATANA2.5.bmp", 1, 1, 1, 40, 40, KATANA3A);
-	LoadDivGraph("syuzinnkouKATANA3.bmp", 1, 1, 1, 40, 40, KATANA3);
+	LoadDivGraph(".\\resource\\images\\syuzinnkouKATANA.bmp", 1, 1, 1, 30, 50, KATANA);
+	LoadDivGraph(".\\resource\\images\\syuzinnkouKATANA2.bmp", 1, 1, 1, 40, 40, KATANA2);
+	LoadDivGraph(".\\resource\\images\\syuzinnkouKATANA2.5.bmp", 1, 1, 1, 40, 40, KATANA3A);
+	LoadDivGraph(".\\resource\\images\\syuzinnkouKATANA3.bmp", 1, 1, 1, 40, 40, KATANA3);
 
 	//左向き刀攻撃
-	LoadDivGraph("syuzinnkouKATANAB.bmp", 1, 1, 1, 30, 50, KATANAB);
-	LoadDivGraph("syuzinnkouKATANA2B.bmp", 1, 1, 1, 40, 40, KATANA2B);
-	LoadDivGraph("syuzinnkouKATANA2.5B.bmp", 1, 1, 1, 40, 40, KATANA3B1);
-	LoadDivGraph("syuzinnkouKATANA3B.bmp", 1, 1, 1, 40, 40, KATANA3B); 
+	LoadDivGraph(".\\resource\\images\\syuzinnkouKATANAB.bmp", 1, 1, 1, 30, 50, KATANAB);
+	LoadDivGraph(".\\resource\\images\\syuzinnkouKATANA2B.bmp", 1, 1, 1, 40, 40, KATANA2B);
+	LoadDivGraph(".\\resource\\images\\syuzinnkouKATANA2.5B.bmp", 1, 1, 1, 40, 40, KATANA3B1);
+	LoadDivGraph(".\\resource\\images\\syuzinnkouKATANA3B.bmp", 1, 1, 1, 40, 40, KATANA3B);
 
-	LoadDivGraph("syuzinnkouKONNBO1BHANTEN.bmp", 1, 1, 1, 44, 33, kikkuhanntenn);
+	LoadDivGraph(".\\resource\\images\\syuzinnkouKONNBO1BHANTEN.bmp", 1, 1, 1, 44, 33, kikkuhanntenn);
 
 	//右に歩く
-	LoadDivGraph("migiaruku.bmp", 1, 1, 1, 35, 33, migiarukugazou);
-	LoadDivGraph("migiaruku2.bmp", 1, 1, 1, 35, 33, migiaruku2gazou);
+	LoadDivGraph(".\\resource\\images\\migiaruku.bmp", 1, 1, 1, 35, 33, migiarukugazou);
+	LoadDivGraph(".\\resource\\images\\migiaruku2.bmp", 1, 1, 1, 35, 33, migiaruku2gazou);
 	//左に歩く
-	LoadDivGraph("hidariaruku.bmp", 1, 1, 1, 35, 33, hidariarukugazou);
-	LoadDivGraph("hidariaruku2.bmp", 1, 1, 1, 35, 33, hidariaruku2gazou);
+	LoadDivGraph(".\\resource\\images\\hidariaruku.bmp", 1, 1, 1, 35, 33, hidariarukugazou);
+	LoadDivGraph(".\\resource\\images\\hidariaruku2.bmp", 1, 1, 1, 35, 33, hidariaruku2gazou);
 	//下に歩く
-	LoadDivGraph("sitaaruku.bmp", 1, 1, 1, 35, 33, sitaarukugazou);
-	LoadDivGraph("sitaaruku2.bmp", 1, 1, 1, 35, 33, sitaaruku2gazou);
+	LoadDivGraph(".\\resource\\images\\sitaaruku.bmp", 1, 1, 1, 35, 33, sitaarukugazou);
+	LoadDivGraph(".\\resource\\images\\sitaaruku2.bmp", 1, 1, 1, 35, 33, sitaaruku2gazou);
 
 	//上に歩く
-	LoadDivGraph("uearuku.bmp", 1, 1, 1, 35, 33, uearukugazou);
-	LoadDivGraph("uearuku2.bmp", 1, 1, 1, 35, 33, uearuku2gazou);
+	LoadDivGraph(".\\resource\\images\\uearuku.bmp", 1, 1, 1, 35, 33, uearukugazou);
+	LoadDivGraph(".\\resource\\images\\uearuku2.bmp", 1, 1, 1, 35, 33, uearuku2gazou);
 
 	//避ける画像
-	LoadDivGraph("yokeru.bmp", 1, 1, 1, 30, 33, syuzinnkouyokerugazou);
-	LoadDivGraph("yokeru2.bmp", 1, 1, 1, 30, 33, syuzinnkouyokerugazou2);
+	LoadDivGraph(".\\resource\\images\\yokeru.bmp", 1, 1, 1, 30, 33, syuzinnkouyokerugazou);
+	LoadDivGraph(".\\resource\\images\\yokeru2.bmp", 1, 1, 1, 30, 33, syuzinnkouyokerugazou2);
 	// ステージモデルの読み込み
 	//stgModelHandle = MV1LoadModel("ColTestStage.mqo");
 
 	//家モデルの読みこみ
-	houseModel = MV1LoadModel("cottage_fbx.mv1");
+	houseModel = MV1LoadModel(".\\resource\\models\\cottage_fbx.mv1");
 
 	//houseModel = MV1LoadModel("untitled.mv1");
 
 	//ポールのモデルの読みこみ
-	poleModel = MV1LoadModel("Power Pole.mv1");
+	poleModel = MV1LoadModel(".\\resource\\models\\Power Pole.mv1");
 
 	// 地面画像の読み込み
-	jimenGHandle = MV1LoadModel("Floor.mv1");
+	jimenGHandle = MV1LoadModel(".\\resource\\models\\Floor.mv1");
 
 	// 古いバス画像の読み込み
-	old_trailerHandle = MV1LoadModel("old_trailer_fbx.mv1");
+	old_trailerHandle = MV1LoadModel(".\\resource\\models\\old_trailer_fbx.mv1");
 
 	// 古いバス画像の読み込み
-	firudoModel = MV1LoadModel("electricbox.mv1");
+	firudoModel = MV1LoadModel(".\\resource\\models\\electricbox.mv1");
 
 
 	//BGM
@@ -380,7 +380,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int nCmdShow)
 		if (Seen == 2) {
 
 
-			sound3 = LoadSoundMem("モーツァルト：アダージョ ロ短調 K.5402.mp4");
+			sound3 = LoadSoundMem(".\\resource\\music\\モーツァルト：アダージョ ロ短調 K.5402.mp4");
 			playerX = 1;
 			playerY = 1;
 			Seen = 3;
@@ -704,7 +704,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int nCmdShow)
 			}
 			//母親を殺した場合//Seen11に続く//X
 			if (Pad[PAD_3] == 1) {
-				sound2 = LoadSoundMem("タイトルの銃声.mp3");
+				sound2 = LoadSoundMem(".\\resource\\sounds\\タイトルの銃声.mp3");
 				PlaySoundMem(sound2, DX_PLAYTYPE_NORMAL);
 				++Seenframe3;
 				Seen = 115;
@@ -827,7 +827,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int nCmdShow)
 			}
 			//子供を殺した場合//
 			if (Pad[PAD_3] == 1) {
-				sound2 = LoadSoundMem("タイトルの銃声.mp3");
+				sound2 = LoadSoundMem(".\\resource\\sounds\\タイトルの銃声.mp3");
 				PlaySoundMem(sound2, DX_PLAYTYPE_NORMAL);
 				++Seenframe2;
 				Seen = 50;
@@ -857,7 +857,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int nCmdShow)
 			++Seenframe2;
 		}
 		if (Seenframe2 > 10 && Seenframe2 < 12) {
-			kodomokorositasound = LoadSoundMem("スラヴ舞曲　作品７２の２  ドヴォルザーク.mp4");
+			kodomokorositasound = LoadSoundMem(".\\resource\\music\\スラヴ舞曲　作品７２の２  ドヴォルザーク.mp4");
 			PlaySoundMem(kodomokorositasound, DX_PLAYTYPE_BACK);
 		}
 		//子供を殺さなかった場合の未来
@@ -1061,7 +1061,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int nCmdShow)
 			playerkonntororulock3 = 0;//ここで主人公を再び操作できるようにする。
 			sousakanou = 0;
 			migimuki = 1;
-			stage2sound = LoadSoundMem("危機.mp3");//アルビノーニ：《弦楽とオルガンのためのアダージョ》 ト短調2.mp4
+			stage2sound = LoadSoundMem(".\\resource\\music\\危機.mp3");//アルビノーニ：《弦楽とオルガンのためのアダージョ》 ト短調2.mp4
 			stage2damage = 1;
 
 			settokubunnki = 0;
@@ -1634,7 +1634,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int nCmdShow)
 			//解決法はBGMが一回しか流れないように値が変動するか、瞬間的にボタンを押した瞬間だけ1になるような値の時にBGMを再生させるしかないので
 			//常に増える変数BGM1の値が10の時にBGMを再生しることで一回しか再生されないので、その一回再生されたBGMを後は止めればいいだけとなった。
 			if (BGM1 == 10 && reBGM1 == 0) {
-				sound4 = LoadSoundMem("Rotary_Phone-Ringtone01-1.mp3");
+				sound4 = LoadSoundMem(".\\resource\\sounds\\Rotary_Phone-Ringtone01-1.mp3");
 				ChangeVolumeSoundMem(180, sound4);//この関数によって音声のボリュームを設定できる。
 				PlaySoundMem(sound4, DX_PLAYTYPE_BACK);
 				dennwalock = 1;
