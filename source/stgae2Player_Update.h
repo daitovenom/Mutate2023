@@ -5,13 +5,13 @@ void Player_Update2() {
 	ranndamuBGM = GetRand(4000);
 	if (ranndamuBGM == 1) {
 		ChangeVolumeSoundMem(140, waraigoesound);//この関数によって音声のボリュームを設定できる。
-		waraigoesound = LoadSoundMem("waraigoe.mp3");
+		waraigoesound = LoadSoundMem(".\\resource\\sounds\\waraigoe.mp3");
 		PlaySoundMem(waraigoesound, DX_PLAYTYPE_BACK, FALSE);
 		ranndamuBGM = 0;
 	}
 	else if (ranndamuBGM == 10) {
 		ChangeVolumeSoundMem(140, waraigoesound2);//この関数によって音声のボリュームを設定できる。
-		waraigoesound2 = LoadSoundMem("著作権フリー 商用利用可能 な 【効果音】　笑い声　大勢　一昔前のアメリカのコメディのような、わざとらしい笑い声.mp4");
+		waraigoesound2 = LoadSoundMem(".\\resource\\sounds\\著作権フリー 商用利用可能 な 【効果音】　笑い声　大勢　一昔前のアメリカのコメディのような、わざとらしい笑い声.mp4");
 		PlaySoundMem(waraigoesound2, DX_PLAYTYPE_BACK, FALSE);
 		ranndamuBGM = 0;
 	}
@@ -315,7 +315,7 @@ void Player_Update2() {
 								stayherelock = 1;//★敵のHP表示を消すために必要な変数。
 								//addattacktime = 300;//先行入力でコンボが決まった時のためのアドアタックタイム。
 								++attackframe;
-								nagurusound = LoadSoundMem("殴る音.mp3");
+								nagurusound = LoadSoundMem(".\\resource\\sounds\\殴る音.mp3");
 								//PlaySoundMem(nagurusound, DX_PLAYTYPE_BACK);
 								nagurugazou = 1;
 								//kougekiKANOU = 0;
@@ -372,7 +372,7 @@ void Player_Update2() {
 								stayherelock = 1;//★敵のHP表示を消すために必要な変数。
 								//addattacktime = 300;//先行入力でコンボが決まった時のためのアドアタックタイム。
 								++attackframe;
-								nagurusound = LoadSoundMem("殴る音.mp3");
+								nagurusound = LoadSoundMem(".\\resource\\sounds\\殴る音.mp3");
 								//PlaySoundMem(nagurusound, DX_PLAYTYPE_BACK);
 								nagurugazou = 1;
 								//kougekiKANOU = 0;
@@ -430,7 +430,7 @@ void Player_Update2() {
 								stayherelock = 1;//★敵のHP表示を消すために必要な変数。
 								//addattacktime = 300;//先行入力でコンボが決まった時のためのアドアタックタイム。
 								++attackframe;
-								nagurusound = LoadSoundMem("殴る音.mp3");
+								nagurusound = LoadSoundMem(".\\resource\\sounds\\殴る音.mp3");
 								//PlaySoundMem(nagurusound, DX_PLAYTYPE_BACK);
 								nagurugazou = 1;
 								//kougekiKANOU = 0;
@@ -487,7 +487,7 @@ void Player_Update2() {
 								stayherelock = 1;//★敵のHP表示を消すために必要な変数。
 								//addattacktime = 300;//先行入力でコンボが決まった時のためのアドアタックタイム。
 								++attackframe;
-								nagurusound = LoadSoundMem("殴る音.mp3");
+								nagurusound = LoadSoundMem(".\\resource\\sounds\\殴る音.mp3");
 								//PlaySoundMem(nagurusound, DX_PLAYTYPE_BACK);
 								nagurugazou = 1;
 								//kougekiKANOU = 0;
@@ -640,7 +640,7 @@ void Player_Update2() {
 								stayherelock = 1;//敵のHPを消すために必要な変数
 								//sennkounyuuryokubunnki = 1;//★if文よりsennkounyuuryokubunnki==1の時でないとここのif文は動かないので、sennkounyuuryokubunnkiが0の時は前のif文の条件に合わないのでattackframe2内であっても殴る2の攻撃できないのは当然である。
 								attackframe2 = 0;//先行入力の分岐でsennkounyuuryokubunnki2に行かなかった場合にattackframe2の値が0になるように書いた。
-								naguru2sound = LoadSoundMem("damage01.m4a");
+								naguru2sound = LoadSoundMem(".\\resource\\sounds\\damage01.m4a");
 								//PlaySoundMem(naguru2sound, DX_PLAYTYPE_BACK);
 								//sennkounyuuryokubunnki3 = 0;//ここの先行入力が成功した際は続けて殴る3がでないようにここの変数を0にする。
 								//attackframe3 = 150;//★先行入力が成功した際は続けて殴る3がでないように殴る3に引っ掛からないような変数の値にする。
@@ -688,7 +688,7 @@ void Player_Update2() {
 								stayherelock = 1;//敵のHPを消すために必要な変数
 								//sennkounyuuryokubunnki = 1;//★if文よりsennkounyuuryokubunnki==1の時でないとここのif文は動かないので、sennkounyuuryokubunnkiが0の時は前のif文の条件に合わないのでattackframe2内であっても殴る2の攻撃できないのは当然である。
 								attackframe2 = 0;//先行入力の分岐でsennkounyuuryokubunnki2に行かなかった場合にattackframe2の値が0になるように書いた。
-								naguru2sound = LoadSoundMem("damage01.m4a");
+								naguru2sound = LoadSoundMem(".\\resource\\sounds\\damage01.m4a");
 								//PlaySoundMem(naguru2sound, DX_PLAYTYPE_BACK);
 								//sennkounyuuryokubunnki3 = 0;//ここの先行入力が成功した際は続けて殴る3がでないようにここの変数を0にする。
 								//attackframe3 = 150;//★先行入力が成功した際は続けて殴る3がでないように殴る3に引っ掛からないような変数の値にする。
@@ -901,7 +901,7 @@ void Player_Update2() {
 									kougekilock = 1;
 									stayherelock = 1;//敵のHPを消すために必要な変数
 									sennkounyuuryokubunnki3 = 0;//再び殴る2などをできるようにするためにここで0にする。
-									naguru3sound = LoadSoundMem("damage03.m4a");
+									naguru3sound = LoadSoundMem(".\\resource\\sounds\\damage03.m4a");
 									PlaySoundMem(naguru3sound, DX_PLAYTYPE_BACK);
 									//++attackframe4;
 									//sennkounyuuryokubunnki = 0;//★追加の殴る攻撃ができるように。追加殴るに繋がると、再び殴る2や殴る3ができるため。
@@ -945,7 +945,7 @@ void Player_Update2() {
 									kougekilock = 1;
 									stayherelock = 1;//敵のHPを消すために必要な変数
 									sennkounyuuryokubunnki3 = 0;//再び殴る2などをできるようにするためにここで0にする。
-									naguru3sound = LoadSoundMem("damage03.m4a");
+									naguru3sound = LoadSoundMem(".\\resource\\sounds\\damage03.m4a");
 									PlaySoundMem(naguru3sound, DX_PLAYTYPE_BACK);
 									//++attackframe4;
 									//sennkounyuuryokubunnki = 0;//★追加の殴る攻撃ができるように。追加殴るに繋がると、再び殴る2や殴る3ができるため。
@@ -993,7 +993,7 @@ void Player_Update2() {
 									kougekilock = 1;
 									stayherelock = 1;//敵のHPを消すために必要な変数
 									sennkounyuuryokubunnki3 = 0;//再び殴る2などをできるようにするためにここで0にする。
-									naguru3sound = LoadSoundMem("damage03.m4a");
+									naguru3sound = LoadSoundMem(".\\resource\\sounds\\damage03.m4a");
 									PlaySoundMem(naguru3sound, DX_PLAYTYPE_BACK);
 									//++attackframe4;
 									sennkounyuuryokubunnki = 0;//★追加の殴る攻撃ができるように。追加殴るに繋がると、再び殴る2や殴る3ができるため。
@@ -1038,7 +1038,7 @@ void Player_Update2() {
 									kougekilock = 1;
 									stayherelock = 1;//敵のHPを消すために必要な変数
 									sennkounyuuryokubunnki3 = 0;//再び殴る2などをできるようにするためにここで0にする。
-									naguru3sound = LoadSoundMem("damage03.m4a");
+									naguru3sound = LoadSoundMem(".\\resource\\sounds\\damage03.m4a");
 									PlaySoundMem(naguru3sound, DX_PLAYTYPE_BACK);
 									//++attackframe4;
 									sennkounyuuryokubunnki = 0;//★追加の殴る攻撃ができるように。追加殴るに繋がると、再び殴る2や殴る3ができるため。
@@ -1181,7 +1181,7 @@ void Player_Update2() {
 						//playerImage = playerGHandle[0];	//真正面の状態にする
 						//sound2 = LoadSoundMem("タイトルの銃声.mp3");
 						//PlaySoundMem(sound2, DX_PLAYTYPE_NORMAL);
-						sound2 = LoadSoundMem("タイトルの銃声.mp3");
+						sound2 = LoadSoundMem(".\\resource\\sounds\\タイトルの銃声.mp3");
 						//PlaySoundMem(sound2, DX_PLAYTYPE_BACK);
 						StartJoypadVibration(DX_INPUT_PAD1, 2800, 200);
 						PlaySoundMem(sound2, DX_PLAYTYPE_BACK);
@@ -1899,7 +1899,7 @@ void Player_Update2() {
 					playerHPlock = 1;
 				}
 				if (tabakocount2 == 1) {
-					tabakosound = LoadSoundMem("Hit01-1.mp3");
+					tabakosound = LoadSoundMem(".\\resource\\sounds\\Hit01-1.mp3");
 					PlaySoundMem(tabakosound, DX_PLAYTYPE_BACK);
 				}
 				if (tabakocount2 > 200) {

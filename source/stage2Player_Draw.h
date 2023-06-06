@@ -1702,7 +1702,7 @@ void stage2PlayerDraw() {
 			if (enemyKENJYUUcount > 30 && enemyKENJYUUcount < 60) {
 				DrawRotaGraph(1230, 300, 4.6, 0, enemy1KENJYUUHandle[1], TRUE);
 				if (enemyKENJYUUcount > 30 && enemyKENJYUUcount < 32) {
-					sound2 = LoadSoundMem("タイトルの銃声.mp3");
+					sound2 = LoadSoundMem(".\\resource\\sounds\\タイトルの銃声.mp3");
 					PlaySoundMem(sound2, DX_PLAYTYPE_BACK);
 				}
 			}
@@ -1754,7 +1754,7 @@ void stage2PlayerDraw() {
 			if (enemyKENJYUUcount > 30 && enemyKENJYUUcount < 60) {
 				DrawRotaGraph(1260, 370, 5, 0, enemy1KENJYUUHandle[1], TRUE);
 				if (enemyKENJYUUcount > 30 && enemyKENJYUUcount < 32) {
-					sound2 = LoadSoundMem("タイトルの銃声.mp3");
+					sound2 = LoadSoundMem(".\\resource\\sounds\\タイトルの銃声.mp3");
 					PlaySoundMem(sound2, DX_PLAYTYPE_BACK);
 				}
 			}
@@ -2605,7 +2605,7 @@ void stage2PlayerDraw() {
 		++conbocountframe;
 	}
 	if (conbocountframe > 0 && conbocountframe < 2) {
-		conbosound = LoadSoundMem("people-studio-laugh-large3.mp3");
+		conbosound = LoadSoundMem(".\\resource\\sounds\\people-studio-laugh-large3.mp3");
 		PlaySoundMem(conbosound, DX_PLAYTYPE_BACK);
 
 	}
@@ -2928,7 +2928,7 @@ void stage2PlayerDraw() {
 		}*/
 
 		if (playerMove4 > 10) {
-			int guasound = LoadSoundMem("ぐあ.m4a");
+			int guasound = LoadSoundMem(".\\resource\\sounds\\ぐあ.m4a");
 			ChangeVolumeSoundMem(170, guasound);//この関数によって音声のボリュームを設定できる。
 			PlaySoundMem(guasound, DX_PLAYTYPE_BACK);
 			playerMove4 = 1;
@@ -2966,7 +2966,7 @@ void stage2PlayerDraw() {
 
 	}
 	if (sakebi == 1) {
-		damegi1sound = LoadSoundMem("_game_swordman-damage2.mp3");
+		damegi1sound = LoadSoundMem(".\\resource\\sounds\\_game_swordman-damage2.mp3");
 		PlaySoundMem(damegi1sound, DX_PLAYTYPE_BACK);
 	}
 	//主人公のHPの上限の設定
@@ -2996,13 +2996,13 @@ void stage2PlayerDraw() {
 	ranndamuBGM = GetRand(4000);
 	if (ranndamuBGM == 1) {
 		ChangeVolumeSoundMem(140, waraigoesound);//この関数によって音声のボリュームを設定できる。
-		waraigoesound = LoadSoundMem("waraigoe.mp3");
+		waraigoesound = LoadSoundMem(".\\resource\\sounds\\waraigoe.mp3");
 		PlaySoundMem(waraigoesound, DX_PLAYTYPE_BACK, FALSE);
 		ranndamuBGM = 0;
 	}
 	else if (ranndamuBGM == 10) {
 		ChangeVolumeSoundMem(140, waraigoesound2);//この関数によって音声のボリュームを設定できる。
-		waraigoesound2 = LoadSoundMem("著作権フリー 商用利用可能 な 【効果音】　笑い声　大勢　一昔前のアメリカのコメディのような、わざとらしい笑い声.mp4");
+		waraigoesound2 = LoadSoundMem(".\\resource\\sounds\\著作権フリー 商用利用可能 な 【効果音】　笑い声　大勢　一昔前のアメリカのコメディのような、わざとらしい笑い声.mp4");
 		PlaySoundMem(waraigoesound2, DX_PLAYTYPE_BACK, FALSE);
 		ranndamuBGM = 0;
 	}
@@ -3309,7 +3309,7 @@ void stage2PlayerDraw() {
 								stayherelock3 = 1;//★敵のHP表示を消すために必要な変数。
 								//addattacktime = 300;//先行入力でコンボが決まった時のためのアドアタックタイム。
 								++attackframe;
-								nagurusound = LoadSoundMem("殴る音.mp3");
+								nagurusound = LoadSoundMem(".\\resource\\sounds\\殴る音.mp3");
 								//PlaySoundMem(nagurusound, DX_PLAYTYPE_BACK);
 								nagurugazou = 1;
 								//kougekiKANOU = 0;
@@ -3365,7 +3365,7 @@ void stage2PlayerDraw() {
 								stayherelock3 = 1;//★敵のHP表示を消すために必要な変数。
 								//addattacktime = 300;//先行入力でコンボが決まった時のためのアドアタックタイム。
 								++attackframe;
-								nagurusound = LoadSoundMem("殴る音.mp3");
+								nagurusound = LoadSoundMem(".\\resource\\sounds\\殴る音.mp3");
 								//PlaySoundMem(nagurusound, DX_PLAYTYPE_BACK);
 								nagurugazou = 1;
 								//kougekiKANOU = 0;
@@ -3423,7 +3423,7 @@ void stage2PlayerDraw() {
 								stayherelock3 = 1;//★敵のHP表示を消すために必要な変数。
 								//addattacktime = 300;//先行入力でコンボが決まった時のためのアドアタックタイム。
 								++attackframe;
-								nagurusound = LoadSoundMem("殴る音.mp3");
+								nagurusound = LoadSoundMem(".\\resource\\sounds\\殴る音.mp3");
 								//PlaySoundMem(nagurusound, DX_PLAYTYPE_BACK);
 								nagurugazou = 1;
 								//kougekiKANOU = 0;
@@ -3479,7 +3479,7 @@ void stage2PlayerDraw() {
 								stayherelock3 = 1;//★敵のHP表示を消すために必要な変数。
 								//addattacktime = 300;//先行入力でコンボが決まった時のためのアドアタックタイム。
 								++attackframe;
-								nagurusound = LoadSoundMem("殴る音.mp3");
+								nagurusound = LoadSoundMem(".\\resource\\sounds\\殴る音.mp3");
 								//PlaySoundMem(nagurusound, DX_PLAYTYPE_BACK);
 								nagurugazou = 1;
 								//kougekiKANOU = 0;
@@ -3642,7 +3642,7 @@ void stage2PlayerDraw() {
 								stayherelock3 = 1;//敵のHPを消すために必要な変数
 								//sennkounyuuryokubunnki = 1;//★if文よりsennkounyuuryokubunnki==1の時でないとここのif文は動かないので、sennkounyuuryokubunnkiが0の時は前のif文の条件に合わないのでattackframe2内であっても殴る2の攻撃できないのは当然である。
 								attackframe2 = 0;//先行入力の分岐でsennkounyuuryokubunnki2に行かなかった場合にattackframe2の値が0になるように書いた。
-								naguru2sound = LoadSoundMem("damage01.m4a");
+								naguru2sound = LoadSoundMem(".\\resource\\sounds\\damage01.m4a");
 								//PlaySoundMem(naguru2sound, DX_PLAYTYPE_BACK);
 								//sennkounyuuryokubunnki3 = 0;//ここの先行入力が成功した際は続けて殴る3がでないようにここの変数を0にする。
 								//attackframe3 = 150;//★先行入力が成功した際は続けて殴る3がでないように殴る3に引っ掛からないような変数の値にする。
@@ -3690,7 +3690,7 @@ void stage2PlayerDraw() {
 								stayherelock3 = 1;//敵のHPを消すために必要な変数
 								//sennkounyuuryokubunnki = 1;//★if文よりsennkounyuuryokubunnki==1の時でないとここのif文は動かないので、sennkounyuuryokubunnkiが0の時は前のif文の条件に合わないのでattackframe2内であっても殴る2の攻撃できないのは当然である。
 								attackframe2 = 0;//先行入力の分岐でsennkounyuuryokubunnki2に行かなかった場合にattackframe2の値が0になるように書いた。
-								naguru2sound = LoadSoundMem("damage01.m4a");
+								naguru2sound = LoadSoundMem(".\\resource\\sounds\\damage01.m4a");
 								//PlaySoundMem(naguru2sound, DX_PLAYTYPE_BACK);
 								//sennkounyuuryokubunnki3 = 0;//ここの先行入力が成功した際は続けて殴る3がでないようにここの変数を0にする。
 								//attackframe3 = 150;//★先行入力が成功した際は続けて殴る3がでないように殴る3に引っ掛からないような変数の値にする。
@@ -4197,7 +4197,7 @@ void stage2PlayerDraw() {
 					playerHPlock = 1;
 				}
 				if (tabakocount2 == 1) {
-					tabakosound = LoadSoundMem("Hit01-1.mp3");
+					tabakosound = LoadSoundMem(".\\resource\\sounds\\Hit01-1.mp3");
 					PlaySoundMem(tabakosound, DX_PLAYTYPE_BACK);
 				}
 				if (tabakocount2 > 200) {

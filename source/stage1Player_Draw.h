@@ -3339,7 +3339,7 @@ void stage1PlayerDraw() {
 		}
 
 		if (playerMove4 > 10) {
-			int guasound = LoadSoundMem("ぐあ.m4a");
+			int guasound = LoadSoundMem(".\\resource\sounds\\ぐあ.m4a");
 			ChangeVolumeSoundMem(170, guasound);//この関数によって音声のボリュームを設定できる。
 			PlaySoundMem(guasound, DX_PLAYTYPE_BACK);
 			playerMove4 = 1;
@@ -3377,7 +3377,7 @@ void stage1PlayerDraw() {
 
 	}
 	if (sakebi == 1) {
-		damegi1sound = LoadSoundMem("_game_swordman-damage2.mp3");
+		damegi1sound = LoadSoundMem(".\\resource\\sounds\\_game_swordman-damage2.mp3");
 		PlaySoundMem(damegi1sound, DX_PLAYTYPE_BACK);
 	}
 	//主人公のHPの上限の設定
@@ -3420,7 +3420,7 @@ void stage1PlayerDraw() {
 		}
 
 		if (playerMove4 > 10) {
-			int guasound = LoadSoundMem("ぐあ.m4a");
+			int guasound = LoadSoundMem(".\\resource\\sounds\\ぐあ.m4a");
 			ChangeVolumeSoundMem(170, guasound);//この関数によって音声のボリュームを設定できる。
 			PlaySoundMem(guasound, DX_PLAYTYPE_BACK);
 			playerMove4 = 1;
@@ -3458,7 +3458,7 @@ void stage1PlayerDraw() {
 
 	}
 	if (sakebi == 1) {
-		damegi1sound = LoadSoundMem("_game_swordman-damage2.mp3");
+		damegi1sound = LoadSoundMem(".\\resource\\sounds\\_game_swordman-damage2.mp3");
 		PlaySoundMem(damegi1sound, DX_PLAYTYPE_BACK);
 	}
 	//主人公のHPの上限の設定

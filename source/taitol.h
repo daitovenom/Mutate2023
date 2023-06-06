@@ -44,10 +44,10 @@ void taitol() {
 					taitollock = 1;
 				}
 				if (taitoitoumeika > 100 && taitoitoumeika < 102) {
-					taitolsound = LoadSoundMem("taitol.mp3");
+					taitolsound = LoadSoundMem(".\\resource\\sounds\\taitol.mp3");
 					ChangeVolumeSoundMem(170, taitolsound);//この関数によって音声のボリュームを設定できる。
 					PlaySoundMem(taitolsound, DX_PLAYTYPE_BACK);
-					wakaresound = LoadSoundMem("グリンカ：ノクターン 別れ.mp4");
+					wakaresound = LoadSoundMem(".\\resource\\music\\グリンカ：ノクターン 別れ.mp4");
 					ChangeVolumeSoundMem(130, wakaresound);//この関数によって音声のボリュームを設定できる。
 					PlaySoundMem(wakaresound, DX_PLAYTYPE_BACK);
 					
@@ -101,7 +101,7 @@ void taitol() {
 			if (Pad[PAD_8] == 1) {
 				startmark = 1;
 				mark = 1;
-				sound1 = LoadSoundMem("タイトル画面のカチャ.mp3");
+				sound1 = LoadSoundMem(".\\resource\\sounds\\タイトル画面のカチャ.mp3");
 				PlaySoundMem(sound1, DX_PLAYTYPE_BACK);
 			}
 			if (mark == 1) {
@@ -114,7 +114,7 @@ void taitol() {
 			//Pad[PAD_1] == 1はAボタン
 			if (startmark == 1 && Pad[PAD_1] == 1) {
 				StopSoundMem(wakaresound);//★BGMを途中で止めるための関数
-				sound2 = LoadSoundMem("タイトルの銃声.mp3");
+				sound2 = LoadSoundMem(".\\resource\\sounds\\タイトルの銃声.mp3");
 				PlaySoundMem(sound2, DX_PLAYTYPE_BACK);
 				tai = 0;
 				mark = 0;
