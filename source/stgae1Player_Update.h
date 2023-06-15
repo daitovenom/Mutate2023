@@ -508,7 +508,7 @@ void Player_Update() {
 								kougekilock = 1;
 								stayherelock3 = 1;//敵のHPを消すために必要な変数
 								sennkounyuuryokubunnki3 = 0;//再び殴る2などをできるようにするためにここで0にする。
-								naguru3sound = LoadSoundMem("damage03.m4a");
+								naguru3sound = LoadSoundMem(".\\resource\\sounds\\damage03.m4a");
 								PlaySoundMem(naguru3sound, DX_PLAYTYPE_BACK);
 								//++attackframe4;
 								//sennkounyuuryokubunnki = 0;//★追加の殴る攻撃ができるように。追加殴るに繋がると、再び殴る2や殴る3ができるため。
@@ -551,7 +551,7 @@ void Player_Update() {
 								kougekilock = 1;
 								stayherelock3 = 1;//敵のHPを消すために必要な変数
 								sennkounyuuryokubunnki3 = 0;//再び殴る2などをできるようにするためにここで0にする。
-								naguru3sound = LoadSoundMem("damage03.m4a");
+								naguru3sound = LoadSoundMem(".\\resource\\sounds\\damage03.m4a");
 								PlaySoundMem(naguru3sound, DX_PLAYTYPE_BACK);
 								//++attackframe4;
 								//sennkounyuuryokubunnki = 0;//★追加の殴る攻撃ができるように。追加殴るに繋がると、再び殴る2や殴る3ができるため。
@@ -637,7 +637,7 @@ void Player_Update() {
 						playerImage = playerGHandle[0];	//真正面の状態にする
 						//sound2 = LoadSoundMem("タイトルの銃声.mp3");
 						//PlaySoundMem(sound2, DX_PLAYTYPE_NORMAL);
-						sound2 = LoadSoundMem("タイトルの銃声.mp3");
+						sound2 = LoadSoundMem(".\\resource\\sounds\\タイトルの銃声.mp3");
 						PlaySoundMem(sound2, DX_PLAYTYPE_BACK);
 						StartJoypadVibration(DX_INPUT_PAD1, 2800, 200);
 
@@ -842,7 +842,7 @@ void Player_Update() {
 								MGtime = 1; //銃を撃ってからの経過時間を0に戻す//ここを0に戻すことで再び連続で撃ったり、再度撃つことができる。
 								
 								//ChangeVolumeSoundMem(80, sound3);//この関数によって音声のボリュームを設定できる。
-								soundM = LoadSoundMem("マシンガンの弾の落ちる音.mp3");
+								soundM = LoadSoundMem(".\\resource\\sounds\\マシンガンの弾の落ちる音.mp3");
 								PlaySoundMem(soundM, DX_PLAYTYPE_BACK);
 							}
 
@@ -927,7 +927,7 @@ void Player_Update() {
 								MGtime = 0; //銃を撃ってからの経過時間を0に戻す//ここを0に戻すことで再び連続で撃ったり、再度撃つことができる。
 
 								//ChangeVolumeSoundMem(80, sound3);//この関数によって音声のボリュームを設定できる。
-								soundM = LoadSoundMem("マシンガンの弾の落ちる音.mp3");
+								soundM = LoadSoundMem(".\\resource\\sounds\\マシンガンの弾の落ちる音.mp3");
 								PlaySoundMem(soundM, DX_PLAYTYPE_BACK);
 							}
 						}
@@ -1039,7 +1039,7 @@ void Player_Update() {
 						playerHPlock = 1;
 					}
 					if (tabakocount2 == 1) {
-						tabakosound = LoadSoundMem("Hit01-1.mp3");
+						tabakosound = LoadSoundMem(".\\resource\\sounds\\Hit01-1.mp3");
 						PlaySoundMem(tabakosound, DX_PLAYTYPE_BACK);
 					}
 					if (tabakocount2 > 200) {

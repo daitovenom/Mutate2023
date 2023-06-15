@@ -23,7 +23,7 @@ void talkdrow() {
 	//解決法はBGMが一回しか流れないように値が変動するか、瞬間的にボタンを押した瞬間だけ1になるような値の時にBGMを再生させるしかないので
 	//常に増える変数BGM1の値が10の時にBGMを再生しることで一回しか再生されないので、その一回再生されたBGMを後は止めればいいだけとなった。
 	if (BGM1 == 10 && reBGM1 == 0) {
-		sound4 = LoadSoundMem("Rotary_Phone-Ringtone01-1.mp3");
+		sound4 = LoadSoundMem(".\\resource\\sounds\\Rotary_Phone-Ringtone01-1.mp3");
 		ChangeVolumeSoundMem(180, sound4);//この関数によって音声のボリュームを設定できる。
 		PlaySoundMem(sound4, DX_PLAYTYPE_BACK);
 		dennwalock = 1;
@@ -90,7 +90,7 @@ void talkdrow() {
 		//電話に出る
 		if (Pad[PAD_2] == 1) {
 			talkhaikei = 1;
-			kaiwasound1 = LoadSoundMem("チャイコフスキー『10月・秋の歌』（楽譜付き）.mp4");
+			kaiwasound1 = LoadSoundMem(".\\resource\\music\\チャイコフスキー『10月・秋の歌』（楽譜付き）.mp4");
 			ChangeVolumeSoundMem(120, kaiwasound1);//この関数によって音声のボリュームを設定できる。
 			PlaySoundMem(kaiwasound1, DX_PLAYTYPE_BACK);
 		}
