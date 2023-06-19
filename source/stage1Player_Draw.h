@@ -2900,7 +2900,7 @@ void stage1PlayerDraw() {
 //敵1の「通常状態」と「攻撃中」に対する攻撃を食らったときの半透明になる部分。
 //if (kougekiKANOU == 1 or kougekiKANOU == 2 or kougekiKANOU == 10) {//攻撃中は攻撃の方の画像が描画されるようにする。
 	if (enemyhanntoumei3 == 0) {//敵が死んで消える際に点滅しないようにするための物。
-		if (enemysabunHP > 0 or enemysabunHPA > 0 or KenemysabunHP > 0 or enemysabunHPB > 0 or GenemysabunHP > 0 or GenemysabunHPA > 0) {
+		if (enemysabunHP > 0 || enemysabunHPA > 0 || KenemysabunHP > 0 || enemysabunHPB > 0 || GenemysabunHP > 0 || GenemysabunHPA > 0) {
 			LEFTmark = 1;
 			++enemyzannzoulockframe1;
 

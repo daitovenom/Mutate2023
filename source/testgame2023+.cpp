@@ -20,22 +20,9 @@
 #pragma warning(disable: 4996)
 
 
-int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int nCmdShow)
+// リソース読込
+void LoadResourceFiles()
 {
-	typedef struct {
-		int Seen;
-	}SaveData_t;
-	
-	SetGraphMode(1470, 780, 32);      // ウィンドウの大きさを指定
-	ChangeWindowMode(TRUE);             // 全画面ではなくウインドウを使用
-	SetWindowSizeExtendRate(1.0f);
-	if (DxLib_Init() == -1) return -1;  // ＤＸライブラリ初期化処理
-	SetDrawScreen(DX_SCREEN_BACK);     // 裏画面を使用する設定
-
-
-	//↓★関数で使いたい画像を瞬間に呼ぶのは時間がかかるし重いのでメインの中に既にスタンバっている状態にする。
-	SetTransColor(255, 255, 255); // 読み込む画像の前にこいつを置くことで透明化できる。ループ内にも書いて正しく動くが毎回読み込むようになってしまうため処理が遅くなる。
-
 	// ムービーファイルをロードします。
 	MovieGraphHandle = LoadGraph(".\\resource\\movies\\180half_f.mp4");
 	// ムービーを再生状態にします
@@ -321,6 +308,29 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int nCmdShow)
 	//kodomokorositasound = LoadSoundMem("スラヴ舞曲　作品７２の２  ドヴォルザーク.mp4");
 
 	//jimenGHandle = LoadGraph("KabeTex.bmp", 0);	// !!!!追加
+
+	return;
+}
+
+int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int nCmdShow)
+{
+	typedef struct {
+		int Seen;
+	}SaveData_t;
+
+	SetGraphMode(1470, 780, 32);      // ウィンドウの大きさを指定
+	ChangeWindowMode(TRUE);             // 全画面ではなくウインドウを使用
+	SetWindowSizeExtendRate(1.0f);
+	if (DxLib_Init() == -1) return -1;  // ＤＸライブラリ初期化処理
+	SetDrawScreen(DX_SCREEN_BACK);     // 裏画面を使用する設定
+
+
+	//↓★関数で使いたい画像を瞬間に呼ぶのは時間がかかるし重いのでメインの中に既にスタンバっている状態にする。
+	SetTransColor(255, 255, 255); // 読み込む画像の前にこいつを置くことで透明化できる。ループ内にも書いて正しく動くが毎回読み込むようになってしまうため処理が遅くなる。
+
+	// リソース読込
+	LoadResourceFiles();
+
 	// ウインドウのサイズを手動ではできず、且つウインドウのサイズに合わせて拡大もしないようにする
 	SetWindowSizeChangeEnableFlag(FALSE, FALSE);
 

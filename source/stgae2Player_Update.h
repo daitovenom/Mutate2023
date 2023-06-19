@@ -2037,7 +2037,7 @@ void Player_Update2() {
 				
 			
 				//右からの殴る攻撃
-				if (ranndamukougeki == 1 or ranndamukougeki == 3) {//GetRand(30) < 30とすると攻撃する途中でやめたり、カウンタが2を超えて上がってしまったりする。
+				if (ranndamukougeki == 1 || ranndamukougeki == 3) {//GetRand(30) < 30とすると攻撃する途中でやめたり、カウンタが2を超えて上がってしまったりする。
 					ranndamulock = 1;//範囲が重なるときだけ主人公と敵の位置が変わるようにした。を無効にするために1にした。
 					++enemyattack;
 					enemyzannzoulock2 = 1;//★enemyzannzoulock = 1;と書いていたから攻撃画像と同時に通常状態も描画されていた。正しくはenemyzannzoulock2 = 1;である
@@ -2061,7 +2061,7 @@ void Player_Update2() {
 					}
 				}
 				//左からの殴る攻撃
-				else if (ranndamukougeki == 2 or ranndamukougeki == 4) {//GetRand(30) < 30とすると攻撃する途中でやめたり、カウンタが2を超えて上がってしまったりする。
+				else if (ranndamukougeki == 2 || ranndamukougeki == 4) {//GetRand(30) < 30とすると攻撃する途中でやめたり、カウンタが2を超えて上がってしまったりする。
 					ranndamulock = 1;//範囲が重なるときだけ主人公と敵の位置が変わるようにした。を無効にするために1にした。
 					++enemyattack;
 					enemyzannzoulock2 = 1;
