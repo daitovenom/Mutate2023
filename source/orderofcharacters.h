@@ -44,12 +44,12 @@ void orderofcharacters() {
 			if (enemyzannzoulock2 == 1) {
 				UEsuraido();
 				DrawRotaGraph(pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 - 50, pos[enemyY1][enemyX1][1] + playerattackhanndou3 - 30, bairituY, 0, STAGE2ENEMY1kougekiB1Handle[0], TRUE);
-				
-				if (ENEMYkougekigazouA1frame > 0 && ENEMYkougekigazouA1frame < 10
-					or
-					ENEMYkougekigazouA1frame > 20 && ENEMYkougekigazouA1frame < 30
-					or
-					ENEMYkougekigazouA1frame > 40 && ENEMYkougekigazouA1frame < 50) {
+
+				if ((ENEMYkougekigazouA1frame > 0 && ENEMYkougekigazouA1frame < 10)
+					||
+					(ENEMYkougekigazouA1frame > 20 && ENEMYkougekigazouA1frame < 30)
+					||
+					(ENEMYkougekigazouA1frame > 40 && ENEMYkougekigazouA1frame < 50)) {
 
 					DrawBox(pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 - 100, pos[enemyY1][enemyX1][1] + playerattackhanndou3 - 30, pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 - 50, pos[enemyY1][enemyX1][1] + playerattackhanndou3 + 30, RED, TRUE);//ŽlŠp‚ð•`‰æ
 				}
@@ -169,11 +169,11 @@ void orderofcharacters() {
 				UEsuraido();
 				DrawRotaGraph(pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 - 50, pos[enemyY1][enemyX1][1] + playerattackhanndou3 - 30, bairituY, 0, STAGE2ENEMY1kougekiB1Handle[0], TRUE);
 				
-				if (ENEMYkougekigazouA1frame > 0 && ENEMYkougekigazouA1frame < 10
-					or
-					ENEMYkougekigazouA1frame > 20 && ENEMYkougekigazouA1frame < 30
-					or
-					ENEMYkougekigazouA1frame > 40 && ENEMYkougekigazouA1frame < 50) {
+				if ((ENEMYkougekigazouA1frame > 0 && ENEMYkougekigazouA1frame < 10)
+					||
+					(ENEMYkougekigazouA1frame > 20 && ENEMYkougekigazouA1frame < 30)
+					||
+					(ENEMYkougekigazouA1frame > 40 && ENEMYkougekigazouA1frame < 50)) {
 
 					DrawBox(pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 - 100, pos[enemyY1][enemyX1][1] + playerattackhanndou3 - 30, pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 - 50, pos[enemyY1][enemyX1][1] + playerattackhanndou3 + 30, RED, TRUE);//ŽlŠp‚ð•`‰æ
 				}
@@ -218,11 +218,11 @@ void orderofcharacters() {
 				UEsuraido();
 				DrawRotaGraph(pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 - 50, pos[enemyY1][enemyX1][1] + playerattackhanndou3 - 30, bairituY, 0, STAGE2ENEMY1kougekiB1Handle[0], TRUE);
 			
-				if (ENEMYkougekigazouA1frame > 0 && ENEMYkougekigazouA1frame < 10
-					or
-					ENEMYkougekigazouA1frame > 20 && ENEMYkougekigazouA1frame < 30
-					or
-					ENEMYkougekigazouA1frame > 40 && ENEMYkougekigazouA1frame < 50) {
+				if ((ENEMYkougekigazouA1frame > 0 && ENEMYkougekigazouA1frame < 10)
+					||
+					(ENEMYkougekigazouA1frame > 20 && ENEMYkougekigazouA1frame < 30)
+					||
+					(ENEMYkougekigazouA1frame > 40 && ENEMYkougekigazouA1frame < 50)) {
 
 					DrawBox(pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 - 100, pos[enemyY1][enemyX1][1] + playerattackhanndou3 - 30, pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 - 50, pos[enemyY1][enemyX1][1] + playerattackhanndou3 + 30, RED, TRUE);//ŽlŠp‚ð•`‰æ
 				}
@@ -311,11 +311,11 @@ void orderofcharacters() {
 				UEsuraido();
 				DrawRotaGraph(pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 - 50, pos[enemyY1][enemyX1][1] + playerattackhanndou3 - 30, bairituY, 0, STAGE2ENEMY1kougekiB1Handle[0], TRUE);
 
-				if (ENEMYkougekigazouA1frame > 0 && ENEMYkougekigazouA1frame < 10
-					or
-					ENEMYkougekigazouA1frame > 20 && ENEMYkougekigazouA1frame < 30
-					or
-					ENEMYkougekigazouA1frame > 40 && ENEMYkougekigazouA1frame < 50) {
+				if ((ENEMYkougekigazouA1frame > 0 && ENEMYkougekigazouA1frame < 10)
+					||
+					(ENEMYkougekigazouA1frame > 20 && ENEMYkougekigazouA1frame < 30)
+					||
+					(ENEMYkougekigazouA1frame > 40 && ENEMYkougekigazouA1frame < 50)) {
 
 					DrawBox(pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 - 100, pos[enemyY1][enemyX1][1] + playerattackhanndou3 - 30, pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 - 50, pos[enemyY1][enemyX1][1] + playerattackhanndou3 + 30, RED, TRUE);//ŽlŠp‚ð•`‰æ
 				}
@@ -451,11 +451,11 @@ void orderofcharacters() {
 				UEsuraido();
 				DrawRotaGraph(pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 - 50, pos[enemyY1][enemyX1][1] + playerattackhanndou3 - 30, bairituY, 0, STAGE2ENEMY1kougekiB1Handle[0], TRUE);
 
-				if (ENEMYkougekigazouA1frame > 0 && ENEMYkougekigazouA1frame < 10
-					or
-					ENEMYkougekigazouA1frame > 20 && ENEMYkougekigazouA1frame < 30
-					or
-					ENEMYkougekigazouA1frame > 40 && ENEMYkougekigazouA1frame < 50) {
+				if ((ENEMYkougekigazouA1frame > 0 && ENEMYkougekigazouA1frame < 10)
+					||
+					(ENEMYkougekigazouA1frame > 20 && ENEMYkougekigazouA1frame < 30)
+					||
+					(ENEMYkougekigazouA1frame > 40 && ENEMYkougekigazouA1frame < 50)) {
 
 					DrawBox(pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 - 100, pos[enemyY1][enemyX1][1] + playerattackhanndou3 - 30, pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 - 50, pos[enemyY1][enemyX1][1] + playerattackhanndou3 + 30, RED, TRUE);//ŽlŠp‚ð•`‰æ
 				}
@@ -531,11 +531,11 @@ void orderofcharacters() {
 				UEsuraido();
 				DrawRotaGraph(pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 - 50, pos[enemyY1][enemyX1][1] + playerattackhanndou3 - 30, bairituY, 0, STAGE2ENEMY1kougekiB1Handle[0], TRUE);
 
-				if (ENEMYkougekigazouA1frame > 0 && ENEMYkougekigazouA1frame < 10
-					or
-					ENEMYkougekigazouA1frame > 20 && ENEMYkougekigazouA1frame < 30
-					or
-					ENEMYkougekigazouA1frame > 40 && ENEMYkougekigazouA1frame < 50) {
+				if ((ENEMYkougekigazouA1frame > 0 && ENEMYkougekigazouA1frame < 10)
+					||
+					(ENEMYkougekigazouA1frame > 20 && ENEMYkougekigazouA1frame < 30)
+					||
+					(ENEMYkougekigazouA1frame > 40 && ENEMYkougekigazouA1frame < 50)) {
 
 					DrawBox(pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 - 100, pos[enemyY1][enemyX1][1] + playerattackhanndou3 - 30, pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 - 50, pos[enemyY1][enemyX1][1] + playerattackhanndou3 + 30, RED, TRUE);//ŽlŠp‚ð•`‰æ
 				}

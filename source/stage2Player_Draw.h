@@ -1924,11 +1924,11 @@ void stage2PlayerDraw() {
 		//★点滅してる回数が長いとダメージを食らった場合で点滅する場合のプログラムが先に終わるため敵の残像が先に1になってしまう。
 		//なので通常の敵が描画された状態で上に点滅したカウンターを食らった敵が描画されてしまっていた。
 		//なのでそうならないようにここでの数値を小さくして100くらいにした。
-		if (enemyhirumaseframe > 0 && enemyhirumaseframe < 20 or
-			enemyhirumaseframe > 40 && enemyhirumaseframe < 60 or
-			enemyhirumaseframe > 80 && enemyhirumaseframe < 100 or
-			enemyhirumaseframe > 120 && enemyhirumaseframe < 140 or
-			enemyhirumaseframe > 160 && enemyhirumaseframe < 180)
+		if ((enemyhirumaseframe > 0 && enemyhirumaseframe < 20) ||
+			(enemyhirumaseframe > 40 && enemyhirumaseframe < 60) ||
+			(enemyhirumaseframe > 80 && enemyhirumaseframe < 100) ||
+			(enemyhirumaseframe > 120 && enemyhirumaseframe < 140) ||
+			(enemyhirumaseframe > 160 && enemyhirumaseframe < 180))
 
 		{
 			//if (enemy1count == 1) {
@@ -1945,17 +1945,17 @@ void stage2PlayerDraw() {
 		stayhere = 1;
 	}
 	//敵1が攻撃してくるときの振動して避ける合図を出している。
-	if (pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 > pos[playerY][playerX][0] + nanameidouX + migiidou + nanameidouX2 + nanameidouX3 + nanameidouX4 + nanameidouX5 + yokeruX &&
+	if ((pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 > pos[playerY][playerX][0] + nanameidouX + migiidou + nanameidouX2 + nanameidouX3 + nanameidouX4 + nanameidouX5 + yokeruX &&
 		pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 - 150 < pos[playerY][playerX][0] + nanameidouX + migiidou + nanameidouX2 + nanameidouX3 + nanameidouX4 + nanameidouX5 + yokeruX &&
 		pos[enemyY1][enemyX1][1] + playerattackhanndou3 + 15 > pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3 + nanameidouY4 + nanameidouY5 &&
 		pos[enemyY1][enemyX1][1] + playerattackhanndou3 - 15 < pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3 + nanameidouY4 + nanameidouY5
-		&& ENEMYkougekigazouA2frame > 0 && ENEMYkougekigazouA2frame < 60 && ranndamukougeki == 1
-		or
-		pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 > pos[playerY][playerX][0] + nanameidouX + migiidou + nanameidouX2 + nanameidouX3 + nanameidouX4 + nanameidouX5 + yokeruX &&
+		&& ENEMYkougekigazouA2frame > 0 && ENEMYkougekigazouA2frame < 60 && ranndamukougeki == 1)
+		||
+		(pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 > pos[playerY][playerX][0] + nanameidouX + migiidou + nanameidouX2 + nanameidouX3 + nanameidouX4 + nanameidouX5 + yokeruX &&
 		pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 - 150 < pos[playerY][playerX][0] + nanameidouX + migiidou + nanameidouX2 + nanameidouX3 + nanameidouX4 + nanameidouX5 + yokeruX &&
 		pos[enemyY1][enemyX1][1] + playerattackhanndou3 + 15 > pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3 + nanameidouY4 + nanameidouY5 &&
 		pos[enemyY1][enemyX1][1] + playerattackhanndou3 - 15 < pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3 + nanameidouY4 + nanameidouY5
-		&& ENEMYkougekigazouA2frame > 0 && ENEMYkougekigazouA2frame < 60 && ranndamukougeki == 3) {
+		&& ENEMYkougekigazouA2frame > 0 && ENEMYkougekigazouA2frame < 60 && ranndamukougeki == 3)) {
 
 		StartJoypadVibration(DX_INPUT_PAD1, 100, 5 * ENEMYkougekigazouA2frame, 1);//右のモーターが振動。
 
@@ -2278,9 +2278,9 @@ void stage2PlayerDraw() {
 
 
 
-	if (Rbotun > 0 && ++Rbotun < 100 && ranndamukougeki == 2
-		or
-		Rbotun > 0 && ++Rbotun < 100 && ranndamukougeki == 3) {
+	if ((Rbotun > 0 && ++Rbotun < 100 && ranndamukougeki == 2)
+		||
+		(Rbotun > 0 && ++Rbotun < 100 && ranndamukougeki == 3)) {
 		//★なんで右のキーを押しても主人公が動かないかと言うとタバコを吸うボタンAによりplayermovelock2が1になるためである。
 		//要は十字キーはplayermovelock2が0の時にしか動かないように組んだためである。
 		if (Pad[PAD_RIGHT] == 1) {
@@ -2300,17 +2300,17 @@ void stage2PlayerDraw() {
 		Rbotun = 0;
 	}
 
-	else if (pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 > pos[playerY][playerX][0] + nanameidouX + migiidou + nanameidouX2 + nanameidouX3 + nanameidouX4 + nanameidouX5 + yokeruX &&
+	else if ((pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 > pos[playerY][playerX][0] + nanameidouX + migiidou + nanameidouX2 + nanameidouX3 + nanameidouX4 + nanameidouX5 + yokeruX &&
 		pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 - 150 < pos[playerY][playerX][0] + nanameidouX + migiidou + nanameidouX2 + nanameidouX3 + nanameidouX4 + nanameidouX5 + yokeruX &&
 		pos[enemyY1][enemyX1][1] + playerattackhanndou3 + 15 > pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3 + nanameidouY4 + nanameidouY5 &&
 		pos[enemyY1][enemyX1][1] + playerattackhanndou3 - 15 < pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3 + nanameidouY4 + nanameidouY5
-		&& ENEMYkougekigazouA2frame > 0 && ENEMYkougekigazouA2frame < 60 && ranndamukougeki == 2
-		or
-		pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 > pos[playerY][playerX][0] + nanameidouX + migiidou + nanameidouX2 + nanameidouX3 + nanameidouX4 + nanameidouX5 + yokeruX &&
+		&& ENEMYkougekigazouA2frame > 0 && ENEMYkougekigazouA2frame < 60 && ranndamukougeki == 2)
+		||
+		(pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 > pos[playerY][playerX][0] + nanameidouX + migiidou + nanameidouX2 + nanameidouX3 + nanameidouX4 + nanameidouX5 + yokeruX &&
 		pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 - 150 < pos[playerY][playerX][0] + nanameidouX + migiidou + nanameidouX2 + nanameidouX3 + nanameidouX4 + nanameidouX5 + yokeruX &&
 		pos[enemyY1][enemyX1][1] + playerattackhanndou3 + 15 > pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3 + nanameidouY4 + nanameidouY5 &&
 		pos[enemyY1][enemyX1][1] + playerattackhanndou3 - 15 < pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3 + nanameidouY4 + nanameidouY5
-		&& ENEMYkougekigazouA2frame > 0 && ENEMYkougekigazouA2frame < 60 && ranndamukougeki == 4
+		&& ENEMYkougekigazouA2frame > 0 && ENEMYkougekigazouA2frame < 60 && ranndamukougeki == 4)
 		) {
 
 		StartJoypadVibration(DX_INPUT_PAD1, 100, 5 * ENEMYkougekigazouA2frame, 0);//左のモーターが振動。
@@ -2327,9 +2327,9 @@ void stage2PlayerDraw() {
 		}
 
 	}
-	if (Rbotun > 0 && ++Rbotun < 100 && ranndamukougeki == 4
-		or
-		Rbotun > 0 && ++Rbotun < 100 && ranndamukougeki == 1) {
+	if ((Rbotun > 0 && ++Rbotun < 100 && ranndamukougeki == 4)
+		||
+		(Rbotun > 0 && ++Rbotun < 100 && ranndamukougeki == 1)) {
 
 		if (Pad[PAD_LEFT] == 1) {
 			ENEMYkougekigazouA1frame = 60;
@@ -2661,15 +2661,15 @@ void stage2PlayerDraw() {
 	}
 
 	//敵の倍率の部分
-	if (stage[0][0][0] < pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 + 25 &&
+	if ((stage[0][0][0] < pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 + 25 &&
 		stage[0][6][0]>  pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 + 25 &&
 		stage[1][0][0] <  pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 + 25 &&
 		stage[1][6][0]>  pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 + 25 &&
 		stage[0][0][1] < pos[enemyY1][enemyX1][1] + playerattackhanndou3 + 65 &&
 		stage[1][0][1] > pos[enemyY1][enemyX1][1] + playerattackhanndou3 + 65 &&
 		stage[0][6][1] < pos[enemyY1][enemyX1][1] + playerattackhanndou3 + 65 &&
-		stage[1][6][1] > pos[enemyY1][enemyX1][1] + playerattackhanndou3 + 65
-		or stage[0][6][1] > pos[enemyY1][enemyX1][1] + playerattackhanndou3 + 65
+		stage[1][6][1] > pos[enemyY1][enemyX1][1] + playerattackhanndou3 + 65)
+		|| stage[0][6][1] > pos[enemyY1][enemyX1][1] + playerattackhanndou3 + 65
 		) {
 		bairituY = 4.6;
 
@@ -2686,29 +2686,29 @@ void stage2PlayerDraw() {
 		bairituY = 5;
 
 	}
-	if (stage[2][0][0] <  pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 + 25 &&
+	if ((stage[2][0][0] <  pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 + 25 &&
 		stage[2][6][0]>  pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 + 25 &&
 		stage[3][0][0] <  pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 + 25 &&
 		stage[3][6][0]>  pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 + 25 &&
 		stage[2][0][1] < pos[enemyY1][enemyX1][1] + playerattackhanndou3 + 65 &&//①
 		stage[3][0][1] > pos[enemyY1][enemyX1][1] + playerattackhanndou3 + 65 &&//②
 		stage[2][6][1] < pos[enemyY1][enemyX1][1] + playerattackhanndou3 + 65 &&
-		stage[3][6][1] > pos[enemyY1][enemyX1][1] + playerattackhanndou3 + 65//ここを消しても一部分が変化しない奴は出来る。
-		or stage[3][6][1] < pos[enemyY1][enemyX1][1] + playerattackhanndou3 + 65
+		stage[3][6][1] > pos[enemyY1][enemyX1][1] + playerattackhanndou3 + 65)//ここを消しても一部分が変化しない奴は出来る。
+		|| stage[3][6][1] < pos[enemyY1][enemyX1][1] + playerattackhanndou3 + 65
 		) {
 		bairituY = 5.4;
 	}
 
 	//もう一人の敵の倍率の部分//もう一人の敵の移動でもう一人の倍率が変化しないように新しい変数のbairituY2を作った。
-	if (stage[0][0][0] < pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B + 25 &&
+	if ((stage[0][0][0] < pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B + 25 &&
 		stage[0][6][0]>  pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B + 25 &&
 		stage[1][0][0] <  pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B + 25 &&
 		stage[1][6][0]>  pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B + 25 &&
 		stage[0][0][1] < pos[enemyY2][enemyX2][1] + playerattackhanndou3B + 65 &&
 		stage[1][0][1] > pos[enemyY2][enemyX2][1] + playerattackhanndou3B + 65 &&
 		stage[0][6][1] < pos[enemyY2][enemyX2][1] + playerattackhanndou3B + 65 &&
-		stage[1][6][1] > pos[enemyY2][enemyX2][1] + playerattackhanndou3B + 65
-		or stage[0][6][1] > pos[enemyY2][enemyX2][1] + playerattackhanndou3B + 65
+		stage[1][6][1] > pos[enemyY2][enemyX2][1] + playerattackhanndou3B + 65)
+		|| stage[0][6][1] > pos[enemyY2][enemyX2][1] + playerattackhanndou3B + 65
 		) {
 		bairituY2 = 4.6;
 
@@ -2725,15 +2725,15 @@ void stage2PlayerDraw() {
 		bairituY2 = 5;
 
 	}
-	if (stage[2][0][0] < pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B + 25 &&
+	if ((stage[2][0][0] < pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B + 25 &&
 		stage[2][6][0]> pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B + 25 &&
 		stage[3][0][0] <  pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B + 25 &&
 		stage[3][6][0]>  pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B + 25 &&
 		stage[2][0][1] < pos[enemyY2][enemyX2][1] + playerattackhanndou3B + 65 &&//①
 		stage[3][0][1] > pos[enemyY2][enemyX2][1] + playerattackhanndou3B + 65 &&//②
 		stage[2][6][1] < pos[enemyY2][enemyX2][1] + playerattackhanndou3B + 65 &&
-		stage[3][6][1] > pos[enemyY2][enemyX2][1] + playerattackhanndou3B + 65//ここを消しても一部分が変化しない奴は出来る。
-		or stage[3][6][1] < pos[enemyY2][enemyX2][1] + playerattackhanndou3B + 65
+		stage[3][6][1] > pos[enemyY2][enemyX2][1] + playerattackhanndou3B + 65)//ここを消しても一部分が変化しない奴は出来る。
+		|| stage[3][6][1] < pos[enemyY2][enemyX2][1] + playerattackhanndou3B + 65
 		) {
 		bairituY2 = 5.4;
 	}
@@ -4784,7 +4784,7 @@ void stage2PlayerDraw() {
 
 
 
-		if (enemysabunHP > 0 or enemysabunHPA > 0 or KenemysabunHP > 0 or enemysabunHPB > 0 or GenemysabunHP > 0 or GenemysabunHPA > 0) {
+		if (enemysabunHP > 0 || enemysabunHPA > 0 || KenemysabunHP > 0 || enemysabunHPB > 0 || GenemysabunHP > 0 || GenemysabunHPA > 0) {
 			//LEFTmark = 1;
 			++enemyzannzoulockframe1;
 
@@ -4830,7 +4830,7 @@ void stage2PlayerDraw() {
 
 		//敵2の「通常状態」と「攻撃中」に対する攻撃を食らったときの半透明になる部分。
 			//else if (kougekiKANOU == 4 or kougekiKANOU == 3 or kougekiKANOU == 20) {//攻撃中は攻撃の方の画像が描画されるようにする。
-		if (anotherenemysabunHP > 0 or anotherenemysabunHPA > 0 or AKenemysabunHP > 0 or AGenemysabunHP > 0 or AenemysabunHPB > 0 or AGenemysabunHPA > 0) {
+		if (anotherenemysabunHP > 0 || anotherenemysabunHPA > 0 || AKenemysabunHP > 0 || AGenemysabunHP > 0 || AenemysabunHPB > 0 || AGenemysabunHPA > 0) {
 			//LEFTmark = 808080;
 			++enemyzannzoulockBframe;
 			anotherenemyzannzoulock = 1;
