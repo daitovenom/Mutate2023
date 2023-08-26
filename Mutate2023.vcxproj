@@ -111,7 +111,7 @@
     <ClInclude Include="source\syuzinnkouKENJYUU.h" />
     <ClInclude Include="source\taitol.h" />
     <ClInclude Include="source\talk.h" />
-    <ClInclude Include="source\UEsuraido.h" />
+    <ClInclude Include="source\jyuujisuraido.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

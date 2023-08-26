@@ -10,12 +10,28 @@ void orderofcharacters() {
 
 
 	//パターン1、主＜敵1＜敵2
-	if (pos[playerY][playerX][1] - 13 + nanameidouY + nanameidouY2 + nanameidouY3 + nanameidouY4 + nanameidouY5 <= pos[enemyY1][enemyX1][1] + playerattackhanndou3 &&
-		pos[enemyY1][enemyX1][1] + playerattackhanndou3 <= pos[enemyY2][enemyX2][1] + playerattackhanndou3B)
+	if (pos[playerY][playerX][1] - 13 + nanameidouY + nanameidouY2 + nanameidouY3 + nanameidouY4 + nanameidouY5 < pos[enemyY1][enemyX1][1] + playerattackhanndou3 &&
+		pos[enemyY1][enemyX1][1] + playerattackhanndou3 < pos[enemyY2][enemyX2][1] + playerattackhanndou3B)
 	{
 		LEFTmark = 111;
 		syuzinkoukougekigazou();
 		KENJYUU();
+		if (migimuki == 1) {
+			suraidoidoubyouga();
+			suraidoidoubyouga2();
+			suraidoidoubyouga3();
+			suraidoidoubyouga4();
+			suraidoidoubyouga5();
+		}
+
+		if (hidarimuki == 1) {
+			suraidohidariidoubyouga();
+			suraidohidariidoubyouga2();
+			suraidohidariidoubyouga3();
+			suraidohidariidoubyouga4();
+			suraidohidariidoubyouga5();
+		}
+		jyuujisuraido();
 		if (zannzoulock == 0 && migimuki == 1) { DrawRotaGraph(pos[playerY][playerX][0] + 20 + nanameidouX + migiidou + nanameidouX2 + nanameidouX3 + nanameidouX4 + nanameidouX5 + yokeruX, pos[playerY][playerX][1] - 13 + nanameidouY + nanameidouY2 + nanameidouY3 + nanameidouY4 + nanameidouY5, bairituX, 0, playerImage, TRUE); }
 		if (zannzoulock == 0 && hidarimuki == 1) { DrawRotaGraph(pos[playerY][playerX][0] + 20 + nanameidouX + migiidou + nanameidouX2 + nanameidouX3 + nanameidouX4 + nanameidouX5 + yokeruX, pos[playerY][playerX][1] - 13 + nanameidouY + nanameidouY2 + nanameidouY3 + nanameidouY4 + nanameidouY5, bairituX, 0, playerImage2, TRUE); }
 
@@ -42,7 +58,7 @@ void orderofcharacters() {
 		if (ENEMYkougekigazouA1frame > 0 && ENEMYkougekigazouA1frame < 60) {
 
 			if (enemyzannzoulock2 == 1) {
-				UEsuraido();
+
 				DrawRotaGraph(pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 - 50, pos[enemyY1][enemyX1][1] + playerattackhanndou3 - 30, bairituY, 0, STAGE2ENEMY1kougekiB1Handle[0], TRUE);
 
 				if ((ENEMYkougekigazouA1frame > 0 && ENEMYkougekigazouA1frame < 10)
@@ -59,7 +75,6 @@ void orderofcharacters() {
 		if (ENEMYkougekigazouA2frame > 0 && ENEMYkougekigazouA2frame < 70) {
 
 			if (enemyzannzoulock2 == 1) {
-				UEsuraido();
 				DrawRotaGraph(pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 - 50, pos[enemyY1][enemyX1][1] + playerattackhanndou3 - 30, bairituY, 0, STAGE2ENEMY1kougekiA1Handle[0], TRUE);
 
 			}
@@ -85,7 +100,7 @@ void orderofcharacters() {
 		if (ENEMYkougekigazouB1frame > 0 && ENEMYkougekigazouB1frame < 70) {
 
 			if (anotherenemyzannzoulock == 1) {
-				UEsuraido();
+
 				DrawRotaGraph(pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B - 50, pos[enemyY2][enemyX2][1] + playerattackhanndou3B - 30, bairituY2, 0, STAGE2ENEMY2kougekiA1Handle[0], TRUE);
 			}
 
@@ -93,7 +108,7 @@ void orderofcharacters() {
 		if (ENEMYkougekigazouB2frame > 0 && ENEMYkougekigazouB2frame < 60) {
 
 			if (anotherenemyzannzoulock == 1) {
-				UEsuraido();
+				
 				DrawRotaGraph(pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B - 50, pos[enemyY2][enemyX2][1] + playerattackhanndou3B - 30, bairituY2, 0, STAGE2ENEMY2kougekiB1Handle[0], TRUE);
 			}
 		}
@@ -105,12 +120,28 @@ void orderofcharacters() {
 
 
 	//2パターン。主＜敵2＜敵1
-	else if (pos[playerY][playerX][1] - 13 + nanameidouY + nanameidouY2 + nanameidouY3 + nanameidouY4 + nanameidouY5 <= pos[enemyY2][enemyX2][1] + playerattackhanndou3B &&
-		pos[enemyY2][enemyX2][1] + playerattackhanndou3B <= pos[enemyY1][enemyX1][1] + playerattackhanndou3 + 25)
+	else if (pos[playerY][playerX][1] - 13 + nanameidouY + nanameidouY2 + nanameidouY3 + nanameidouY4 + nanameidouY5 < pos[enemyY2][enemyX2][1] + playerattackhanndou3B &&
+		pos[enemyY2][enemyX2][1] + playerattackhanndou3B < pos[enemyY1][enemyX1][1] + playerattackhanndou3 + 25)
 	{
 		LEFTmark = 3333;
 		syuzinkoukougekigazou();
 		KENJYUU();
+		if (migimuki == 1) {
+			suraidoidoubyouga();
+			suraidoidoubyouga2();
+			suraidoidoubyouga3();
+			suraidoidoubyouga4();
+			suraidoidoubyouga5();
+		}
+
+		if (hidarimuki == 1) {
+			suraidohidariidoubyouga();
+			suraidohidariidoubyouga2();
+			suraidohidariidoubyouga3();
+			suraidohidariidoubyouga4();
+			suraidohidariidoubyouga5();
+		}
+		jyuujisuraido();
 		if (zannzoulock == 0 && migimuki == 1) { DrawRotaGraph(pos[playerY][playerX][0] + 20 + nanameidouX + migiidou + nanameidouX2 + nanameidouX3 + nanameidouX4 + nanameidouX5 + yokeruX, pos[playerY][playerX][1] - 13 + nanameidouY + nanameidouY2 + nanameidouY3 + nanameidouY4 + nanameidouY5, bairituX, 0, playerImage, TRUE); }
 		if (zannzoulock == 0 && hidarimuki == 1) { DrawRotaGraph(pos[playerY][playerX][0] + 20 + nanameidouX + migiidou + nanameidouX2 + nanameidouX3 + nanameidouX4 + nanameidouX5 + yokeruX, pos[playerY][playerX][1] - 13 + nanameidouY + nanameidouY2 + nanameidouY3 + nanameidouY4 + nanameidouY5, bairituX, 0, playerImage2, TRUE); }
 		//ダメージを負った際の主人公の画像。
@@ -135,7 +166,7 @@ void orderofcharacters() {
 		if (ENEMYkougekigazouB1frame > 0 && ++ENEMYkougekigazouB1frame < 70) {
 
 			if (anotherenemyzannzoulock == 1) {
-				UEsuraido();
+				
 				DrawRotaGraph(pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B - 50, pos[enemyY2][enemyX2][1] + playerattackhanndou3B - 30, bairituY2, 0, STAGE2ENEMY2kougekiA1Handle[0], TRUE);
 			}
 
@@ -143,7 +174,7 @@ void orderofcharacters() {
 		if (ENEMYkougekigazouB2frame > 0 && ENEMYkougekigazouB2frame < 60) {
 
 			if (anotherenemyzannzoulock == 1) {
-				UEsuraido();
+				
 				DrawRotaGraph(pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B - 50, pos[enemyY2][enemyX2][1] + playerattackhanndou3B - 30, bairituY2, 0, STAGE2ENEMY2kougekiB1Handle[0], TRUE);
 			}
 		}
@@ -166,7 +197,7 @@ void orderofcharacters() {
 		if (ENEMYkougekigazouA1frame > 0 && ENEMYkougekigazouA1frame < 60) {
 
 			if (enemyzannzoulock2 == 1) {
-				UEsuraido();
+				
 				DrawRotaGraph(pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 - 50, pos[enemyY1][enemyX1][1] + playerattackhanndou3 - 30, bairituY, 0, STAGE2ENEMY1kougekiB1Handle[0], TRUE);
 				
 				if ((ENEMYkougekigazouA1frame > 0 && ENEMYkougekigazouA1frame < 10)
@@ -183,7 +214,7 @@ void orderofcharacters() {
 		if (ENEMYkougekigazouA2frame > 0 && ENEMYkougekigazouA2frame < 70) {
 
 			if (enemyzannzoulock2 == 1) {
-				UEsuraido();
+				
 				DrawRotaGraph(pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 - 50, pos[enemyY1][enemyX1][1] + playerattackhanndou3 - 30, bairituY, 0, STAGE2ENEMY1kougekiA1Handle[0], TRUE);
 
 			}
@@ -198,8 +229,8 @@ void orderofcharacters() {
 
 
 	//パターン3、敵1＜主＜敵2
-	else if (pos[enemyY1][enemyX1][1] + playerattackhanndou3 <= pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3
-		&& pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3 + nanameidouY4 + nanameidouY5 <= pos[enemyY2][enemyX2][1] + playerattackhanndou3B)
+	else if (pos[enemyY1][enemyX1][1] + playerattackhanndou3 < pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3
+		&& pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3 + nanameidouY4 + nanameidouY5 < pos[enemyY2][enemyX2][1] + playerattackhanndou3B)
 	{
 
 		//敵1を描画
@@ -215,7 +246,7 @@ void orderofcharacters() {
 		if (ENEMYkougekigazouA1frame > 0 && ENEMYkougekigazouA1frame < 60) {
 
 			if (enemyzannzoulock2 == 1) {
-				UEsuraido();
+				
 				DrawRotaGraph(pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 - 50, pos[enemyY1][enemyX1][1] + playerattackhanndou3 - 30, bairituY, 0, STAGE2ENEMY1kougekiB1Handle[0], TRUE);
 			
 				if ((ENEMYkougekigazouA1frame > 0 && ENEMYkougekigazouA1frame < 10)
@@ -232,7 +263,7 @@ void orderofcharacters() {
 		if (ENEMYkougekigazouA2frame > 0 && ENEMYkougekigazouA2frame < 70) {
 
 			if (enemyzannzoulock2 == 1) {
-				UEsuraido();
+			
 				DrawRotaGraph(pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 - 50, pos[enemyY1][enemyX1][1] + playerattackhanndou3 - 30, bairituY, 0, STAGE2ENEMY1kougekiA1Handle[0], TRUE);
 
 			}
@@ -244,6 +275,22 @@ void orderofcharacters() {
 
 		syuzinkoukougekigazou();
 		KENJYUU();
+		if (migimuki == 1) {
+			suraidoidoubyouga();
+			suraidoidoubyouga2();
+			suraidoidoubyouga3();
+			suraidoidoubyouga4();
+			suraidoidoubyouga5();
+		}
+
+		if (hidarimuki == 1) {
+			suraidohidariidoubyouga();
+			suraidohidariidoubyouga2();
+			suraidohidariidoubyouga3();
+			suraidohidariidoubyouga4();
+			suraidohidariidoubyouga5();
+		}
+		jyuujisuraido();
 		if (zannzoulock == 0 && migimuki == 1) { DrawRotaGraph(pos[playerY][playerX][0] + 20 + nanameidouX + migiidou + nanameidouX2 + nanameidouX3 + nanameidouX4 + nanameidouX5 + yokeruX, pos[playerY][playerX][1] - 13 + nanameidouY + nanameidouY2 + nanameidouY3 + nanameidouY4 + nanameidouY5, bairituX, 0, playerImage, TRUE); }
 		if (zannzoulock == 0 && hidarimuki == 1) { DrawRotaGraph(pos[playerY][playerX][0] + 20 + nanameidouX + migiidou + nanameidouX2 + nanameidouX3 + nanameidouX4 + nanameidouX5 + yokeruX, pos[playerY][playerX][1] - 13 + nanameidouY + nanameidouY2 + nanameidouY3 + nanameidouY4 + nanameidouY5, bairituX, 0, playerImage2, TRUE); }
 	
@@ -269,7 +316,7 @@ void orderofcharacters() {
 		if (ENEMYkougekigazouB1frame > 0 && ENEMYkougekigazouB1frame < 70) {
 
 			if (anotherenemyzannzoulock == 1) {
-				UEsuraido();
+				
 				DrawRotaGraph(pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B - 50, pos[enemyY2][enemyX2][1] + playerattackhanndou3B - 30, bairituY2, 0, STAGE2ENEMY2kougekiA1Handle[0], TRUE);
 			}
 
@@ -277,7 +324,7 @@ void orderofcharacters() {
 		if (ENEMYkougekigazouB2frame > 0 && ENEMYkougekigazouB2frame < 60) {
 
 			if (anotherenemyzannzoulock == 1) {
-				UEsuraido();
+				
 				DrawRotaGraph(pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B - 50, pos[enemyY2][enemyX2][1] + playerattackhanndou3B - 30, bairituY2, 0, STAGE2ENEMY2kougekiB1Handle[0], TRUE);
 			}
 		}
@@ -288,8 +335,8 @@ void orderofcharacters() {
 
 
 	//パターン4、敵1＜敵2＜主
-	else if (pos[enemyY1][enemyX1][1] + playerattackhanndou3 <= pos[enemyY2][enemyX2][1] + playerattackhanndou3B
-		&& pos[enemyY2][enemyX2][1] + playerattackhanndou3B <= pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3 + nanameidouY4 + nanameidouY5)
+	else if (pos[enemyY1][enemyX1][1] + playerattackhanndou3 < pos[enemyY2][enemyX2][1] + playerattackhanndou3B
+		&& pos[enemyY2][enemyX2][1] + playerattackhanndou3B < pos[playerY][playerX][1] + nanameidouY + nanameidouY2 + nanameidouY3 + nanameidouY4 + nanameidouY5)
 	{
 
 	LEFTmark = 99999;
@@ -308,7 +355,7 @@ void orderofcharacters() {
 		if (ENEMYkougekigazouA1frame > 0 && ENEMYkougekigazouA1frame < 60) {
 
 			if (enemyzannzoulock2 == 1) {
-				UEsuraido();
+				
 				DrawRotaGraph(pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 - 50, pos[enemyY1][enemyX1][1] + playerattackhanndou3 - 30, bairituY, 0, STAGE2ENEMY1kougekiB1Handle[0], TRUE);
 
 				if ((ENEMYkougekigazouA1frame > 0 && ENEMYkougekigazouA1frame < 10)
@@ -325,7 +372,7 @@ void orderofcharacters() {
 		if (ENEMYkougekigazouA2frame > 0 && ENEMYkougekigazouA2frame < 70) {
 
 			if (enemyzannzoulock2 == 1) {
-				UEsuraido();
+				
 				DrawRotaGraph(pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 - 50, pos[enemyY1][enemyX1][1] + playerattackhanndou3 - 30, bairituY, 0, STAGE2ENEMY1kougekiA1Handle[0], TRUE);
 
 			}
@@ -350,7 +397,7 @@ void orderofcharacters() {
 		if (ENEMYkougekigazouB1frame > 0 && ENEMYkougekigazouB1frame < 70) {
 
 			if (anotherenemyzannzoulock == 1) {
-				UEsuraido();
+				
 				DrawRotaGraph(pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B - 50, pos[enemyY2][enemyX2][1] + playerattackhanndou3B - 30, bairituY2, 0, STAGE2ENEMY2kougekiA1Handle[0], TRUE);
 			}
 
@@ -358,15 +405,32 @@ void orderofcharacters() {
 		if (ENEMYkougekigazouB2frame > 0 && ENEMYkougekigazouB2frame < 60) {
 
 			if (anotherenemyzannzoulock == 1) {
-				UEsuraido();
+				
 				DrawRotaGraph(pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B - 50, pos[enemyY2][enemyX2][1] + playerattackhanndou3B - 30, bairituY2, 0, STAGE2ENEMY2kougekiB1Handle[0], TRUE);
 			}
 		}
 
 		enemydamegegazou2();
-		KENJYUU();
+		
 
 		syuzinkoukougekigazou();
+		KENJYUU();
+		if (migimuki == 1) {
+			suraidoidoubyouga();
+			suraidoidoubyouga2();
+			suraidoidoubyouga3();
+			suraidoidoubyouga4();
+			suraidoidoubyouga5();
+		}
+
+		if (hidarimuki == 1) {
+			suraidohidariidoubyouga();
+			suraidohidariidoubyouga2();
+			suraidohidariidoubyouga3();
+			suraidohidariidoubyouga4();
+			suraidohidariidoubyouga5();
+		}
+		jyuujisuraido();
 		if (zannzoulock == 0 && migimuki == 1) { DrawRotaGraph(pos[playerY][playerX][0] + 20 + nanameidouX + migiidou + nanameidouX2 + nanameidouX3 + nanameidouX4 + nanameidouX5 + yokeruX, pos[playerY][playerX][1] - 13 + nanameidouY + nanameidouY2 + nanameidouY3 + nanameidouY4 + nanameidouY5, bairituX, 0, playerImage, TRUE); }
 		if (zannzoulock == 0 && hidarimuki == 1) { DrawRotaGraph(pos[playerY][playerX][0] + 20 + nanameidouX + migiidou + nanameidouX2 + nanameidouX3 + nanameidouX4 + nanameidouX5 + yokeruX, pos[playerY][playerX][1] - 13 + nanameidouY + nanameidouY2 + nanameidouY3 + nanameidouY4 + nanameidouY5, bairituX, 0, playerImage2, TRUE); }
 
@@ -386,8 +450,8 @@ void orderofcharacters() {
 
 
 	//パターン5　敵2＜主＜敵1
-	else if (pos[enemyY2][enemyX2][1] + playerattackhanndou3B <= pos[playerY][playerX][1] - 13 + nanameidouY + nanameidouY2 + nanameidouY3 + nanameidouY4 + nanameidouY5
-		&& pos[playerY][playerX][1] - 13 + nanameidouY + nanameidouY2 + nanameidouY3 <= pos[enemyY1][enemyX1][1] + playerattackhanndou3) {
+	else if (pos[enemyY2][enemyX2][1] + playerattackhanndou3B < pos[playerY][playerX][1] - 13 + nanameidouY + nanameidouY2 + nanameidouY3 + nanameidouY4 + nanameidouY5
+		&& pos[playerY][playerX][1] - 13 + nanameidouY + nanameidouY2 + nanameidouY3 < pos[enemyY1][enemyX1][1] + playerattackhanndou3) {
 		//もう一人の敵を描画
 		if (stayherelock2 == 0) {
 			if (anotherenemyzannzoulock == 0) {//カウンターを食らった際に主人公がアナログパッドで初期位置に戻ると敵の残像が0になる。
@@ -403,7 +467,7 @@ void orderofcharacters() {
 		if (ENEMYkougekigazouB1frame > 0 && ++ENEMYkougekigazouB1frame < 70) {
 
 			if (anotherenemyzannzoulock == 1) {
-				UEsuraido();
+				
 				DrawRotaGraph(pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B - 50, pos[enemyY2][enemyX2][1] + playerattackhanndou3B - 30, bairituY2, 0, STAGE2ENEMY2kougekiA1Handle[0], TRUE);
 			}
 
@@ -411,7 +475,7 @@ void orderofcharacters() {
 		if (ENEMYkougekigazouB2frame > 0 && ENEMYkougekigazouB2frame < 60) {
 
 			if (anotherenemyzannzoulock == 1) {
-				UEsuraido();
+				
 				DrawRotaGraph(pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B - 50, pos[enemyY2][enemyX2][1] + playerattackhanndou3B - 30, bairituY2, 0, STAGE2ENEMY2kougekiB1Handle[0], TRUE);
 			}
 		}
@@ -422,6 +486,22 @@ void orderofcharacters() {
 
 		syuzinkoukougekigazou();
 		KENJYUU();
+		if (migimuki == 1) {
+			suraidoidoubyouga();
+			suraidoidoubyouga2();
+			suraidoidoubyouga3();
+			suraidoidoubyouga4();
+			suraidoidoubyouga5();
+		}
+
+		if (hidarimuki == 1) {
+			suraidohidariidoubyouga();
+			suraidohidariidoubyouga2();
+			suraidohidariidoubyouga3();
+			suraidohidariidoubyouga4();
+			suraidohidariidoubyouga5();
+		}
+		jyuujisuraido();
 		if (zannzoulock == 0 && migimuki == 1) { DrawRotaGraph(pos[playerY][playerX][0] + 20 + nanameidouX + migiidou + nanameidouX2 + nanameidouX3 + nanameidouX4 + nanameidouX5 + yokeruX, pos[playerY][playerX][1] - 13 + nanameidouY + nanameidouY2 + nanameidouY3 + nanameidouY4 + nanameidouY5, bairituX, 0, playerImage, TRUE); }
 		if (zannzoulock == 0 && hidarimuki == 1) { DrawRotaGraph(pos[playerY][playerX][0] + 20 + nanameidouX + migiidou + nanameidouX2 + nanameidouX3 + nanameidouX4 + nanameidouX5 + yokeruX, pos[playerY][playerX][1] - 13 + nanameidouY + nanameidouY2 + nanameidouY3 + nanameidouY4 + nanameidouY5, bairituX, 0, playerImage2, TRUE); }
 
@@ -448,7 +528,7 @@ void orderofcharacters() {
 		if (ENEMYkougekigazouA1frame > 0 && ENEMYkougekigazouA1frame < 60) {
 
 			if (enemyzannzoulock2 == 1) {
-				UEsuraido();
+				
 				DrawRotaGraph(pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 - 50, pos[enemyY1][enemyX1][1] + playerattackhanndou3 - 30, bairituY, 0, STAGE2ENEMY1kougekiB1Handle[0], TRUE);
 
 				if ((ENEMYkougekigazouA1frame > 0 && ENEMYkougekigazouA1frame < 10)
@@ -465,7 +545,7 @@ void orderofcharacters() {
 		if (ENEMYkougekigazouA2frame > 0 && ENEMYkougekigazouA2frame < 70) {
 
 			if (enemyzannzoulock2 == 1) {
-				UEsuraido();
+				
 				DrawRotaGraph(pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 - 50, pos[enemyY1][enemyX1][1] + playerattackhanndou3 - 30, bairituY, 0, STAGE2ENEMY1kougekiA1Handle[0], TRUE);
 
 			}
@@ -476,9 +556,9 @@ void orderofcharacters() {
 
 
 
-	//パターン6
-	else if (pos[enemyY2][enemyX2][1] + playerattackhanndou3B <= pos[enemyY1][enemyX1][1] + playerattackhanndou3 &&
-		pos[enemyY1][enemyX1][1] + playerattackhanndou3 <= pos[playerY][playerX][1] - 13 + nanameidouY + nanameidouY2 + nanameidouY3 + nanameidouY4 + nanameidouY5)
+	//パターン6　敵2＜敵1＜主
+	else if (pos[enemyY2][enemyX2][1] + playerattackhanndou3B < pos[enemyY1][enemyX1][1] + playerattackhanndou3 &&
+		pos[enemyY1][enemyX1][1] + playerattackhanndou3 < pos[playerY][playerX][1] - 13 + nanameidouY + nanameidouY2 + nanameidouY3 + nanameidouY4 + nanameidouY5)
 	{
 
 	LEFTmark = 65432;
@@ -498,7 +578,7 @@ void orderofcharacters() {
 		if (ENEMYkougekigazouB1frame > 0 && ENEMYkougekigazouB1frame < 70) {
 
 			if (anotherenemyzannzoulock == 1) {
-				UEsuraido();
+				
 				DrawRotaGraph(pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B - 50, pos[enemyY2][enemyX2][1] + playerattackhanndou3B - 30, bairituY2, 0, STAGE2ENEMY2kougekiA1Handle[0], TRUE);
 			}
 
@@ -506,7 +586,7 @@ void orderofcharacters() {
 		if (ENEMYkougekigazouB2frame > 0 && ENEMYkougekigazouB2frame < 60) {
 
 			if (anotherenemyzannzoulock == 1) {
-				UEsuraido();
+				
 				DrawRotaGraph(pos[enemyY2][enemyX2][0] + playerattackhanndouB + playerattackhanndou2B + playerattackhanndou3B - 50, pos[enemyY2][enemyX2][1] + playerattackhanndou3B - 30, bairituY2, 0, STAGE2ENEMY2kougekiB1Handle[0], TRUE);
 			}
 		}
@@ -528,7 +608,7 @@ void orderofcharacters() {
 		if (ENEMYkougekigazouA1frame > 0 && ENEMYkougekigazouA1frame < 60) {
 
 			if (enemyzannzoulock2 == 1) {
-				UEsuraido();
+				
 				DrawRotaGraph(pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 - 50, pos[enemyY1][enemyX1][1] + playerattackhanndou3 - 30, bairituY, 0, STAGE2ENEMY1kougekiB1Handle[0], TRUE);
 
 				if ((ENEMYkougekigazouA1frame > 0 && ENEMYkougekigazouA1frame < 10)
@@ -545,7 +625,7 @@ void orderofcharacters() {
 		if (ENEMYkougekigazouA2frame > 0 && ENEMYkougekigazouA2frame < 70) {
 
 			if (enemyzannzoulock2 == 1) {
-				UEsuraido();
+				
 				DrawRotaGraph(pos[enemyY1][enemyX1][0] + playerattackhanndou + playerattackhanndou2 + playerattackhanndou3 - 50, pos[enemyY1][enemyX1][1] + playerattackhanndou3 - 30, bairituY, 0, STAGE2ENEMY1kougekiA1Handle[0], TRUE);
 
 			}
@@ -557,6 +637,22 @@ void orderofcharacters() {
 
 		syuzinkoukougekigazou();
 		KENJYUU();
+		if (migimuki == 1) {
+			suraidoidoubyouga();
+			suraidoidoubyouga2();
+			suraidoidoubyouga3();
+			suraidoidoubyouga4();
+			suraidoidoubyouga5();
+		}
+
+		if (hidarimuki == 1) {
+			suraidohidariidoubyouga();
+			suraidohidariidoubyouga2();
+			suraidohidariidoubyouga3();
+			suraidohidariidoubyouga4();
+			suraidohidariidoubyouga5();
+		}
+		jyuujisuraido();
 		if (zannzoulock == 0 && migimuki == 1) { DrawRotaGraph(pos[playerY][playerX][0] + 20 + nanameidouX + migiidou + nanameidouX2 + nanameidouX3 + nanameidouX4 + nanameidouX5 + yokeruX, pos[playerY][playerX][1] - 13 + nanameidouY + nanameidouY2 + nanameidouY3 + nanameidouY4 + nanameidouY5, bairituX, 0, playerImage, TRUE); }
 		if (zannzoulock == 0 && hidarimuki == 1) { DrawRotaGraph(pos[playerY][playerX][0] + 20 + nanameidouX + migiidou + nanameidouX2 + nanameidouX3 + nanameidouX4 + nanameidouX5 + yokeruX, pos[playerY][playerX][1] - 13 + nanameidouY + nanameidouY2 + nanameidouY3 + nanameidouY4 + nanameidouY5, bairituX, 0, playerImage2, TRUE); }
 

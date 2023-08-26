@@ -65,7 +65,7 @@
     <ClInclude Include="source\talk.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="source\UEsuraido.h">
+    <ClInclude Include="source\jyuujisuraido.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="source\orderofcharacters.h">
