@@ -1,5 +1,4 @@
-#ifndef DEF_enemydamegegazou_H
-#define DEF_enemydamegegazou_H
+#pragma once // 二重include防止
 
 void enemydamegegazou1() {
 
@@ -76,5 +75,3 @@ void enemydamegegazou2() {
 	}
 
 }
-
-#endif

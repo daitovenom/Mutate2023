@@ -1,10 +1,4 @@
-
-
-
-#ifndef DEF_orderofcharacters_H //“ñdinclude–h~
-
-#define DEF_orderofcharacters_H
-
+#pragma once // “ñdinclude–h~
 
 void orderofcharacters() {
 
@@ -664,5 +658,3 @@ void orderofcharacters() {
 		}
 	}
 }
-
-#endif

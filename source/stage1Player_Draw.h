@@ -7,9 +7,8 @@
 #include "syuzinnkouKENJYUU.h"
 #include "aruku.h"
 
-#ifndef DEF_STAGE1PLAYER_DRAW_H //二重include防止
+#pragma once // 二重include防止
 
-#define DEF_STAGE1PLAYER_DRAW_H
 //★★ヘッダファイルと関数について。
 //多分、関数stage1PlayerDraw()を呼ぶ際にここにもstage1.hを書くとstage1.hに書いてある関数stage1PlayerDraw()を呼んでしまい、二重になるため、
 //このヘッダファイルにはstage1.hを書くとエラーが出る。それ以外のヘッダファイルは書く意味はないが、もし書いたとしてもエラーにはならないだろう。
@@ -3487,6 +3486,3 @@ void stage1PlayerDraw() {
 
 
 }
-
-
-#endif

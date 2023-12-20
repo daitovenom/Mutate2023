@@ -1,11 +1,4 @@
-
-
-#ifndef DEF_settoku_H //“ñdinclude–h~
-
-#define DEF_settoku_H
-
-
-
+#pragma once // “ñdinclude–h~
 
 void settoku1() {
 
@@ -289,9 +282,3 @@ void settoku4() {
 	}
 
 }
-
-
-
-
-
-#endif

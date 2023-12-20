@@ -1,8 +1,4 @@
-
-
-#ifndef DEF_kasurikougeki_H //“ñdinclude–h~
-
-#define DEF_kasurikougeki_H
+#pragma once // “ñdinclude–h~
 
 void kasurikougeki() {
 	if (kougekikannkakulock == 0) {
@@ -582,4 +578,3 @@ void kasurikougeki() {
 	//	kougekikannkaku2 = 0;
 	//}
 }
-#endif

@@ -1,10 +1,8 @@
 ﻿#include "DxLib.h"
 
-#ifndef DEF_KEY_H //二重include防止
+#pragma once // 二重include防止
 
-#define DEF_KEY_H
 int Key[256];
-
 
 int gpUpdateKey()
 {
@@ -40,7 +38,3 @@ void UpdatePadState()
 	CurrPadState = GetJoypadInputState(DX_INPUT_KEY_PAD1);  //引数はこれで良いのかな？
 }
 
-
-
-#endif
-#pragma once

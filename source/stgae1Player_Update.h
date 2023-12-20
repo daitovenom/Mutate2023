@@ -5,8 +5,7 @@
 #include "taitol.h"	// !! taitolh.hをtaitol.hに変更しました
 #include "stage1Player_Draw.h"
 
-
-
+#pragma once // 二重include防止
 
 void Player_Update() {
 	//gpUpdateKey();  // キーの入力状態を取得
