@@ -1,11 +1,4 @@
-
-
-#ifndef DEF_jyuujisuraido_H //二重include防止
-
-#define DEF_jyuujisuraido_H
-
-
-
+#pragma once // 二重include防止
 
 void jyuujisuraido() {
 
@@ -268,4 +261,3 @@ void jyuujisuraido() {
 	}
 	
 }
-#endif

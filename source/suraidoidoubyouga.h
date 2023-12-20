@@ -1,9 +1,4 @@
-
-
-#ifndef DEF_suraidoidoubyouga_H //“ñdinclude–h~
-
-#define DEF_suraidoidoubyouga_H
-
+#pragma once // “ñdinclude–h~
 
 //R1‚ÅƒXƒ‰ƒCƒhˆÚ“®‚·‚é•”•ªB
 void suraidoidoubyouga() {
@@ -317,4 +312,3 @@ void suraidohidariidoubyouga5() {
 		zannzoulock = 0;
 	}
 }
-#endif

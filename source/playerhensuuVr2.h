@@ -1,8 +1,6 @@
 ﻿#include "DxLib.h"
 
-#ifndef DEF_PLAYERHENNSUU_H //二重include防止
-
-#define DEF_PLAYERHENNSUU_H
+#pragma once // 二重include防止
 
 int LEFT = 0;
 
@@ -1508,4 +1506,3 @@ int LEFTmark2 = 0;
 int  KATANA3B1[1];
 
 //int lock2 = 0;
-#endif

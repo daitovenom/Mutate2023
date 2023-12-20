@@ -1,8 +1,4 @@
-
-
-#ifndef DEF_settoku2_H //“ñdinclude–h~
-
-#define DEF_settoku2_H
+#pragma once // “ñdinclude–h~
 
 void settoku5() {
 	SetFontSize(16);
@@ -567,6 +563,3 @@ void settoku11() {
 		}
 	}
 }
-
-
-#endif

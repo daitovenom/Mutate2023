@@ -1,10 +1,8 @@
 ﻿#include "DxLib.h"
 #include "talk.h"
 #pragma warning(disable: 4996)
+#pragma once // 二重include防止
 
-#ifndef DEF_TAITOLH_H //二重include防止
-
-#define DEF_TAITOLH_H
 int tai = 1;
 int cheak = 0;
 int haikei = 1;
@@ -124,4 +122,3 @@ void taitol() {
 		}
 	}
 }
-#endif

@@ -2,9 +2,7 @@
 #include "talk.h"
 #include "playerhensuuVr2.h"
 
-#ifndef COUNTINE_H //二重include防止
-
-#define COUNTINE_H
+#pragma once // 二重include防止
 
 void countinuekannsuu() {
 
@@ -199,5 +197,3 @@ void countinuekannsuu2() {
 	//if (talk == 4) { talkdrow2(); countinue = 0; }
 	//キーNを押した場合はtalk.hの関数に飛ぶようにすればいい。
 }
-
-#endif

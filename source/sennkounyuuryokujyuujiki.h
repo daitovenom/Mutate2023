@@ -1,8 +1,4 @@
-﻿
-
-#ifndef DEF_SURAIDOKANNSUU_H //二重include防止
-
-#define DEF_SURAIDOKANNSUU_H
+﻿#pragma once // 二重include防止
 
 void suraidoidoukannsuu() {
 
@@ -95,4 +91,3 @@ void suraidoidoukannsuu() {
 
 
 }
-#endif

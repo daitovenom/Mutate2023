@@ -1,5 +1,7 @@
 #include <time.h>
 
+#pragma once // “ñdinclude–h~
+
 void Player_Update2() {
 	//gpUpdateKey();  // ƒL[‚Ì“ü—Íó‘Ô‚ğæ“¾
 	ranndamuBGM = GetRand(4000);

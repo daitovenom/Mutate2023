@@ -1,13 +1,7 @@
 #include "DxLib.h"
 #include "key.h"
 #pragma warning(disable: 4996)
-
-//#include "taitolh.h"
-#ifndef DEF_talk_H //“ñdinclude–h~
-
-#define DEF_talk_H
-
-
+#pragma once // “ñdinclude–h~
 
 void syokiiti() {
 	int enemyX = 4, enemyY = 1;   // “G‚ÌˆÊ’u
@@ -322,5 +316,3 @@ void talkdrow() {
 	}
 	return;
 }
-
-#endif

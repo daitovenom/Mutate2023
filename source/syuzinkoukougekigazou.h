@@ -1,10 +1,4 @@
-
-
-#ifndef DEF_syuzinkoukougekigazou_H //二重include防止
-
-#define DEF_syuzinkoukougekigazou_H
-
-
+#pragma once // 二重include防止
 
 void syuzinkoukougekigazou() {
 	if (playerkonntororulock == 0) {
@@ -713,5 +707,3 @@ void syuzinkoukougekigazou() {
 	//DrawRotaGraph(pos[playerY][playerX][0] + 20 + nanameidouX + migiidou + nanameidouX2 + nanameidouX3 + nanameidouX4 + nanameidouX5, pos[playerY][playerX][1] - 13 + nanameidouY + nanameidouY2 + nanameidouY3 + nanameidouY4 + nanameidouY5, bairituX, 0, playergardGHandle[0], TRUE);
 	//}
 }
-
-#endif

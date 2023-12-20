@@ -1,10 +1,4 @@
-
-
-#ifndef DEF_syuzinnkouKENJYUU_H //ìÒèdincludeñhé~
-
-#define DEF_syuzinnkouKENJYUU_H
-
-
+#pragma once // ìÒèdincludeñhé~
 
 void KENJYUU() {
 	//LEFTmark = 44444;
@@ -69,5 +63,3 @@ void KENJYUU() {
 		DrawRotaGraph(pos[playerY][playerX][0] + 20 + nanameidouX + migiidou + nanameidouX2 + nanameidouX3 + nanameidouX4 + nanameidouX5 - 13 + yokeruX, pos[playerY][playerX][1] - 13 + nanameidouY + nanameidouY2 + nanameidouY3 + nanameidouY4 + nanameidouY5, bairituX, 0, playerKENJYUUImage, TRUE);
 	}
 }
-
-#endif
